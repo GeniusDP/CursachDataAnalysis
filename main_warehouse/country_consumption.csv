@@ -1,0 +1,1365 @@
+,Year,Country,Consumption
+0,1990,China,874.0
+1,1991,China,848.0
+2,1992,China,877.0
+3,1993,China,929.0
+4,1994,China,973.0
+5,1995,China,1045.0
+6,1996,China,1074.0
+7,1997,China,1073.0
+8,1998,China,1079.0
+9,1999,China,1099.0
+10,2000,China,1130.0
+11,2001,China,1168.0
+12,2002,China,1246.0
+13,2003,China,1420.0
+14,2004,China,1615.0
+15,2005,China,1782.0
+16,2006,China,1950.0
+17,2007,China,2099.0
+18,2008,China,2155.0
+19,2009,China,2297.0
+20,2010,China,2536.0
+21,2011,China,2723.0
+22,2012,China,2821.0
+23,2013,China,2912.0
+24,2014,China,2966.0
+25,2015,China,2994.0
+26,2016,China,2977.0
+27,2017,China,3070.0
+28,2018,China,3201.0
+29,2019,China,3309.0
+30,2020,China,3381.0
+33,1990,United States,1910.0
+34,1991,United States,1925.0
+35,1992,United States,1964.0
+36,1993,United States,1998.0
+37,1994,United States,2036.0
+38,1995,United States,2063.0
+39,1996,United States,2108.0
+40,1997,United States,2130.0
+41,1998,United States,2148.0
+42,1999,United States,2206.0
+43,2000,United States,2269.0
+44,2001,United States,2226.0
+45,2002,United States,2256.0
+46,2003,United States,2262.0
+47,2004,United States,2308.0
+48,2005,United States,2320.0
+49,2006,United States,2298.0
+50,2007,United States,2338.0
+51,2008,United States,2278.0
+52,2009,United States,2165.0
+53,2010,United States,2217.0
+54,2011,United States,2191.0
+55,2012,United States,2152.0
+56,2013,United States,2190.0
+57,2014,United States,2216.0
+58,2015,United States,2192.0
+59,2016,United States,2168.0
+60,2017,United States,2161.0
+61,2018,United States,2236.0
+62,2019,United States,2214.0
+63,2020,United States,2046.0
+66,1990,Brazil,141.0
+67,1991,Brazil,143.0
+68,1992,Brazil,145.0
+69,1993,Brazil,148.0
+70,1994,Brazil,156.0
+71,1995,Brazil,162.0
+72,1996,Brazil,170.0
+73,1997,Brazil,179.0
+74,1998,Brazil,183.0
+75,1999,Brazil,187.0
+76,2000,Brazil,188.0
+77,2001,Brazil,191.0
+78,2002,Brazil,196.0
+79,2003,Brazil,199.0
+80,2004,Brazil,211.0
+81,2005,Brazil,216.0
+82,2006,Brazil,224.0
+83,2007,Brazil,236.0
+84,2008,Brazil,250.0
+85,2009,Brazil,242.0
+86,2010,Brazil,267.0
+87,2011,Brazil,271.0
+88,2012,Brazil,282.0
+89,2013,Brazil,294.0
+90,2014,Brazil,303.0
+91,2015,Brazil,297.0
+92,2016,Brazil,287.0
+93,2017,Brazil,292.0
+94,2018,Brazil,288.0
+95,2019,Brazil,293.0
+96,2020,Brazil,286.0
+99,1990,Belgium,48.0
+100,1991,Belgium,50.0
+101,1992,Belgium,51.0
+102,1993,Belgium,49.0
+103,1994,Belgium,52.0
+104,1995,Belgium,53.0
+105,1996,Belgium,56.0
+106,1997,Belgium,56.0
+107,1998,Belgium,57.0
+108,1999,Belgium,57.0
+109,2000,Belgium,58.0
+110,2001,Belgium,58.0
+111,2002,Belgium,56.0
+112,2003,Belgium,58.0
+113,2004,Belgium,58.0
+114,2005,Belgium,58.0
+115,2006,Belgium,57.0
+116,2007,Belgium,56.0
+117,2008,Belgium,58.0
+118,2009,Belgium,56.0
+119,2010,Belgium,60.0
+120,2011,Belgium,56.0
+121,2012,Belgium,53.0
+122,2013,Belgium,56.0
+123,2014,Belgium,53.0
+124,2015,Belgium,52.0
+125,2016,Belgium,56.0
+126,2017,Belgium,55.0
+127,2018,Belgium,53.0
+128,2019,Belgium,55.0
+129,2020,Belgium,51.0
+132,1990,Czechia,50.0
+133,1991,Czechia,45.0
+134,1992,Czechia,44.0
+135,1993,Czechia,43.0
+136,1994,Czechia,41.0
+137,1995,Czechia,42.0
+138,1996,Czechia,43.0
+139,1997,Czechia,43.0
+140,1998,Czechia,42.0
+141,1999,Czechia,39.0
+142,2000,Czechia,41.0
+143,2001,Czechia,42.0
+144,2002,Czechia,43.0
+145,2003,Czechia,45.0
+146,2004,Czechia,46.0
+147,2005,Czechia,45.0
+148,2006,Czechia,46.0
+149,2007,Czechia,46.0
+150,2008,Czechia,45.0
+151,2009,Czechia,43.0
+152,2010,Czechia,45.0
+153,2011,Czechia,43.0
+154,2012,Czechia,43.0
+155,2013,Czechia,43.0
+156,2014,Czechia,42.0
+157,2015,Czechia,42.0
+158,2016,Czechia,41.0
+159,2017,Czechia,43.0
+160,2018,Czechia,43.0
+161,2019,Czechia,43.0
+162,2020,Czechia,39.0
+165,1990,France,225.0
+166,1991,France,237.0
+167,1992,France,234.0
+168,1993,France,238.0
+169,1994,France,231.0
+170,1995,France,240.0
+171,1996,France,251.0
+172,1997,France,244.0
+173,1998,France,252.0
+174,1999,France,252.0
+175,2000,France,255.0
+176,2001,France,260.0
+177,2002,France,261.0
+178,2003,France,268.0
+179,2004,France,271.0
+180,2005,France,273.0
+181,2006,France,268.0
+182,2007,France,265.0
+183,2008,France,266.0
+184,2009,France,255.0
+185,2010,France,263.0
+186,2011,France,258.0
+187,2012,France,258.0
+188,2013,France,259.0
+189,2014,France,249.0
+190,2015,France,253.0
+191,2016,France,248.0
+192,2017,France,247.0
+193,2018,France,246.0
+194,2019,France,243.0
+195,2020,France,217.0
+198,1990,Germany,351.0
+199,1991,Germany,344.0
+200,1992,Germany,338.0
+201,1993,Germany,335.0
+202,1994,Germany,333.0
+203,1995,Germany,336.0
+204,1996,Germany,348.0
+205,1997,Germany,345.0
+206,1998,Germany,343.0
+207,1999,Germany,335.0
+208,2000,Germany,337.0
+209,2001,Germany,347.0
+210,2002,Germany,339.0
+211,2003,Germany,338.0
+212,2004,Germany,341.0
+213,2005,Germany,339.0
+214,2006,Germany,349.0
+215,2007,Germany,331.0
+216,2008,Germany,335.0
+217,2009,Germany,313.0
+218,2010,Germany,330.0
+219,2011,Germany,313.0
+220,2012,Germany,315.0
+221,2013,Germany,322.0
+222,2014,Germany,307.0
+223,2015,Germany,309.0
+224,2016,Germany,310.0
+225,2017,Germany,311.0
+226,2018,Germany,302.0
+227,2019,Germany,294.0
+228,2020,Germany,275.0
+231,1990,Italy,147.0
+232,1991,Italy,150.0
+233,1992,Italy,149.0
+234,1993,Italy,149.0
+235,1994,Italy,147.0
+236,1995,Italy,159.0
+237,1996,Italy,159.0
+238,1997,Italy,162.0
+239,1998,Italy,166.0
+240,1999,Italy,169.0
+241,2000,Italy,172.0
+242,2001,Italy,172.0
+243,2002,Italy,174.0
+244,2003,Italy,182.0
+245,2004,Italy,183.0
+246,2005,Italy,187.0
+247,2006,Italy,185.0
+248,2007,Italy,184.0
+249,2008,Italy,182.0
+250,2009,Italy,170.0
+251,2010,Italy,174.0
+252,2011,Italy,168.0
+253,2012,Italy,162.0
+254,2013,Italy,156.0
+255,2014,Italy,147.0
+256,2015,Italy,153.0
+257,2016,Italy,151.0
+258,2017,Italy,154.0
+259,2018,Italy,151.0
+260,2019,Italy,149.0
+261,2020,Italy,137.0
+264,1990,Netherlands,67.0
+265,1991,Netherlands,69.0
+266,1992,Netherlands,69.0
+267,1993,Netherlands,70.0
+268,1994,Netherlands,70.0
+269,1995,Netherlands,73.0
+270,1996,Netherlands,77.0
+271,1997,Netherlands,75.0
+272,1998,Netherlands,75.0
+273,1999,Netherlands,74.0
+274,2000,Netherlands,75.0
+275,2001,Netherlands,77.0
+276,2002,Netherlands,78.0
+277,2003,Netherlands,80.0
+278,2004,Netherlands,81.0
+279,2005,Netherlands,80.0
+280,2006,Netherlands,79.0
+281,2007,Netherlands,79.0
+282,2008,Netherlands,78.0
+283,2009,Netherlands,77.0
+284,2010,Netherlands,83.0
+285,2011,Netherlands,77.0
+286,2012,Netherlands,77.0
+287,2013,Netherlands,75.0
+288,2014,Netherlands,71.0
+289,2015,Netherlands,72.0
+290,2016,Netherlands,74.0
+291,2017,Netherlands,74.0
+292,2018,Netherlands,73.0
+293,2019,Netherlands,72.0
+294,2020,Netherlands,70.0
+297,1990,Poland,103.0
+298,1991,Poland,101.0
+299,1992,Poland,99.0
+300,1993,Poland,101.0
+301,1994,Poland,96.0
+302,1995,Poland,99.0
+303,1996,Poland,104.0
+304,1997,Poland,102.0
+305,1998,Poland,95.0
+306,1999,Poland,93.0
+307,2000,Poland,89.0
+308,2001,Poland,90.0
+309,2002,Poland,89.0
+310,2003,Poland,91.0
+311,2004,Poland,91.0
+312,2005,Poland,92.0
+313,2006,Poland,97.0
+314,2007,Poland,97.0
+315,2008,Poland,98.0
+316,2009,Poland,94.0
+317,2010,Poland,101.0
+318,2011,Poland,101.0
+319,2012,Poland,98.0
+320,2013,Poland,98.0
+321,2014,Poland,95.0
+322,2015,Poland,96.0
+323,2016,Poland,100.0
+324,2017,Poland,104.0
+325,2018,Poland,106.0
+326,2019,Poland,103.0
+327,2020,Poland,97.0
+330,1990,Portugal,17.0
+331,1991,Portugal,17.0
+332,1992,Portugal,18.0
+333,1993,Portugal,18.0
+334,1994,Portugal,18.0
+335,1995,Portugal,20.0
+336,1996,Portugal,20.0
+337,1997,Portugal,21.0
+338,1998,Portugal,23.0
+339,1999,Portugal,24.0
+340,2000,Portugal,25.0
+341,2001,Portugal,25.0
+342,2002,Portugal,26.0
+343,2003,Portugal,25.0
+344,2004,Portugal,26.0
+345,2005,Portugal,26.0
+346,2006,Portugal,25.0
+347,2007,Portugal,25.0
+348,2008,Portugal,25.0
+349,2009,Portugal,24.0
+350,2010,Portugal,23.0
+351,2011,Portugal,23.0
+352,2012,Portugal,21.0
+353,2013,Portugal,22.0
+354,2014,Portugal,21.0
+355,2015,Portugal,22.0
+356,2016,Portugal,22.0
+357,2017,Portugal,23.0
+358,2018,Portugal,22.0
+359,2019,Portugal,22.0
+360,2020,Portugal,20.0
+363,1990,Romania,62.0
+364,1991,Romania,51.0
+365,1992,Romania,46.0
+366,1993,Romania,46.0
+367,1994,Romania,43.0
+368,1995,Romania,47.0
+369,1996,Romania,48.0
+370,1997,Romania,45.0
+371,1998,Romania,41.0
+372,1999,Romania,36.0
+373,2000,Romania,36.0
+374,2001,Romania,37.0
+375,2002,Romania,38.0
+376,2003,Romania,40.0
+377,2004,Romania,39.0
+378,2005,Romania,39.0
+379,2006,Romania,40.0
+380,2007,Romania,40.0
+381,2008,Romania,40.0
+382,2009,Romania,35.0
+383,2010,Romania,35.0
+384,2011,Romania,36.0
+385,2012,Romania,35.0
+386,2013,Romania,32.0
+387,2014,Romania,32.0
+388,2015,Romania,32.0
+389,2016,Romania,32.0
+390,2017,Romania,33.0
+391,2018,Romania,34.0
+392,2019,Romania,33.0
+393,2020,Romania,32.0
+396,1990,Spain,90.0
+397,1991,Spain,93.0
+398,1992,Spain,95.0
+399,1993,Spain,91.0
+400,1994,Spain,96.0
+401,1995,Spain,101.0
+402,1996,Spain,99.0
+403,1997,Spain,106.0
+404,1998,Spain,111.0
+405,1999,Spain,116.0
+406,2000,Spain,121.0
+407,2001,Spain,125.0
+408,2002,Spain,128.0
+409,2003,Spain,133.0
+410,2004,Spain,139.0
+411,2005,Spain,142.0
+412,2006,Spain,141.0
+413,2007,Spain,143.0
+414,2008,Spain,139.0
+415,2009,Spain,127.0
+416,2010,Spain,127.0
+417,2011,Spain,125.0
+418,2012,Spain,124.0
+419,2013,Spain,116.0
+420,2014,Spain,113.0
+421,2015,Spain,117.0
+422,2016,Spain,118.0
+423,2017,Spain,125.0
+424,2018,Spain,124.0
+425,2019,Spain,121.0
+426,2020,Spain,107.0
+429,1990,Sweden,47.0
+430,1991,Sweden,49.0
+431,1992,Sweden,47.0
+432,1993,Sweden,46.0
+433,1994,Sweden,50.0
+434,1995,Sweden,50.0
+435,1996,Sweden,51.0
+436,1997,Sweden,50.0
+437,1998,Sweden,51.0
+438,1999,Sweden,50.0
+439,2000,Sweden,48.0
+440,2001,Sweden,50.0
+441,2002,Sweden,52.0
+442,2003,Sweden,51.0
+443,2004,Sweden,53.0
+444,2005,Sweden,52.0
+445,2006,Sweden,50.0
+446,2007,Sweden,50.0
+447,2008,Sweden,50.0
+448,2009,Sweden,45.0
+449,2010,Sweden,51.0
+450,2011,Sweden,50.0
+451,2012,Sweden,50.0
+452,2013,Sweden,49.0
+453,2014,Sweden,48.0
+454,2015,Sweden,44.0
+455,2016,Sweden,48.0
+456,2017,Sweden,49.0
+457,2018,Sweden,50.0
+458,2019,Sweden,49.0
+459,2020,Sweden,47.0
+462,1990,United Kingdom,206.0
+463,1991,United Kingdom,213.0
+464,1992,United Kingdom,213.0
+465,1993,United Kingdom,215.0
+466,1994,United Kingdom,216.0
+467,1995,United Kingdom,217.0
+468,1996,United Kingdom,226.0
+469,1997,United Kingdom,219.0
+470,1998,United Kingdom,221.0
+471,1999,United Kingdom,222.0
+472,2000,United Kingdom,223.0
+473,2001,United Kingdom,224.0
+474,2002,United Kingdom,221.0
+475,2003,United Kingdom,224.0
+476,2004,United Kingdom,222.0
+477,2005,United Kingdom,223.0
+478,2006,United Kingdom,219.0
+479,2007,United Kingdom,211.0
+480,2008,United Kingdom,209.0
+481,2009,United Kingdom,196.0
+482,2010,United Kingdom,204.0
+483,2011,United Kingdom,189.0
+484,2012,United Kingdom,194.0
+485,2013,United Kingdom,191.0
+486,2014,United Kingdom,180.0
+487,2015,United Kingdom,182.0
+488,2016,United Kingdom,179.0
+489,2017,United Kingdom,176.0
+490,2018,United Kingdom,175.0
+491,2019,United Kingdom,170.0
+492,2020,United Kingdom,154.0
+495,1990,Norway,21.0
+496,1991,Norway,22.0
+497,1992,Norway,22.0
+498,1993,Norway,24.0
+499,1994,Norway,23.0
+500,1995,Norway,24.0
+501,1996,Norway,23.0
+502,1997,Norway,24.0
+503,1998,Norway,25.0
+504,1999,Norway,26.0
+505,2000,Norway,26.0
+506,2001,Norway,27.0
+507,2002,Norway,25.0
+508,2003,Norway,27.0
+509,2004,Norway,27.0
+510,2005,Norway,27.0
+511,2006,Norway,27.0
+512,2007,Norway,28.0
+513,2008,Norway,32.0
+514,2009,Norway,32.0
+515,2010,Norway,33.0
+516,2011,Norway,28.0
+517,2012,Norway,31.0
+518,2013,Norway,33.0
+519,2014,Norway,29.0
+520,2015,Norway,30.0
+521,2016,Norway,29.0
+522,2017,Norway,30.0
+523,2018,Norway,29.0
+524,2019,Norway,28.0
+525,2020,Norway,27.0
+528,1990,Turkey,51.0
+529,1991,Turkey,51.0
+530,1992,Turkey,53.0
+531,1993,Turkey,56.0
+532,1994,Turkey,56.0
+533,1995,Turkey,61.0
+534,1996,Turkey,66.0
+535,1997,Turkey,70.0
+536,1998,Turkey,71.0
+537,1999,Turkey,70.0
+538,2000,Turkey,76.0
+539,2001,Turkey,70.0
+540,2002,Turkey,74.0
+541,2003,Turkey,79.0
+542,2004,Turkey,81.0
+543,2005,Turkey,84.0
+544,2006,Turkey,93.0
+545,2007,Turkey,100.0
+546,2008,Turkey,98.0
+547,2009,Turkey,98.0
+548,2010,Turkey,106.0
+549,2011,Turkey,112.0
+550,2012,Turkey,118.0
+551,2013,Turkey,115.0
+552,2014,Turkey,119.0
+553,2015,Turkey,129.0
+554,2016,Turkey,137.0
+555,2017,Turkey,147.0
+556,2018,Turkey,144.0
+557,2019,Turkey,145.0
+558,2020,Turkey,141.0
+561,1990,Kazakhstan,73.0
+562,1991,Kazakhstan,75.0
+563,1992,Kazakhstan,79.0
+564,1993,Kazakhstan,66.0
+565,1994,Kazakhstan,58.0
+566,1995,Kazakhstan,52.0
+567,1996,Kazakhstan,45.0
+568,1997,Kazakhstan,39.0
+569,1998,Kazakhstan,39.0
+570,1999,Kazakhstan,36.0
+571,2000,Kazakhstan,36.0
+572,2001,Kazakhstan,35.0
+573,2002,Kazakhstan,40.0
+574,2003,Kazakhstan,43.0
+575,2004,Kazakhstan,51.0
+576,2005,Kazakhstan,51.0
+577,2006,Kazakhstan,61.0
+578,2007,Kazakhstan,66.0
+579,2008,Kazakhstan,70.0
+580,2009,Kazakhstan,63.0
+581,2010,Kazakhstan,69.0
+582,2011,Kazakhstan,77.0
+583,2012,Kazakhstan,74.0
+584,2013,Kazakhstan,82.0
+585,2014,Kazakhstan,65.0
+586,2015,Kazakhstan,55.0
+587,2016,Kazakhstan,64.0
+588,2017,Kazakhstan,66.0
+589,2018,Kazakhstan,76.0
+590,2019,Kazakhstan,77.0
+591,2020,Kazakhstan,70.0
+594,1990,Russia,879.0
+595,1991,Russia,871.0
+596,1992,Russia,795.0
+597,1993,Russia,751.0
+598,1994,Russia,657.0
+599,1995,Russia,636.0
+600,1996,Russia,630.0
+601,1997,Russia,602.0
+602,1998,Russia,588.0
+603,1999,Russia,609.0
+604,2000,Russia,619.0
+605,2001,Russia,626.0
+606,2002,Russia,623.0
+607,2003,Russia,645.0
+608,2004,Russia,647.0
+609,2005,Russia,651.0
+610,2006,Russia,670.0
+611,2007,Russia,672.0
+612,2008,Russia,688.0
+613,2009,Russia,647.0
+614,2010,Russia,688.0
+615,2011,Russia,711.0
+616,2012,Russia,728.0
+617,2013,Russia,707.0
+618,2014,Russia,707.0
+619,2015,Russia,693.0
+620,2016,Russia,714.0
+621,2017,Russia,729.0
+622,2018,Russia,760.0
+623,2019,Russia,768.0
+624,2020,Russia,731.0
+627,1990,Ukraine,252.0
+628,1991,Ukraine,252.0
+629,1992,Ukraine,220.0
+630,1993,Ukraine,195.0
+631,1994,Ukraine,166.0
+632,1995,Ukraine,164.0
+633,1996,Ukraine,150.0
+634,1997,Ukraine,144.0
+635,1998,Ukraine,136.0
+636,1999,Ukraine,135.0
+637,2000,Ukraine,134.0
+638,2001,Ukraine,134.0
+639,2002,Ukraine,136.0
+640,2003,Ukraine,141.0
+641,2004,Ukraine,142.0
+642,2005,Ukraine,141.0
+643,2006,Ukraine,137.0
+644,2007,Ukraine,139.0
+645,2008,Ukraine,135.0
+646,2009,Ukraine,114.0
+647,2010,Ukraine,132.0
+648,2011,Ukraine,126.0
+649,2012,Ukraine,122.0
+650,2013,Ukraine,116.0
+651,2014,Ukraine,106.0
+652,2015,Ukraine,93.0
+653,2016,Ukraine,92.0
+654,2017,Ukraine,89.0
+655,2018,Ukraine,93.0
+656,2019,Ukraine,89.0
+657,2020,Ukraine,86.0
+660,1990,Uzbekistan,47.0
+661,1991,Uzbekistan,48.0
+662,1992,Uzbekistan,45.0
+663,1993,Uzbekistan,47.0
+664,1994,Uzbekistan,46.0
+665,1995,Uzbekistan,43.0
+666,1996,Uzbekistan,44.0
+667,1997,Uzbekistan,45.0
+668,1998,Uzbekistan,47.0
+669,1999,Uzbekistan,50.0
+670,2000,Uzbekistan,51.0
+671,2001,Uzbekistan,51.0
+672,2002,Uzbekistan,53.0
+673,2003,Uzbekistan,51.0
+674,2004,Uzbekistan,51.0
+675,2005,Uzbekistan,48.0
+676,2006,Uzbekistan,49.0
+677,2007,Uzbekistan,48.0
+678,2008,Uzbekistan,50.0
+679,2009,Uzbekistan,46.0
+680,2010,Uzbekistan,49.0
+681,2011,Uzbekistan,50.0
+682,2012,Uzbekistan,44.0
+683,2013,Uzbekistan,44.0
+684,2014,Uzbekistan,41.0
+685,2015,Uzbekistan,39.0
+686,2016,Uzbekistan,42.0
+687,2017,Uzbekistan,44.0
+688,2018,Uzbekistan,46.0
+689,2019,Uzbekistan,47.0
+690,2020,Uzbekistan,44.0
+693,1990,Argentina,44.0
+694,1991,Argentina,46.0
+695,1992,Argentina,47.0
+696,1993,Argentina,48.0
+697,1994,Argentina,52.0
+698,1995,Argentina,52.0
+699,1996,Argentina,54.0
+700,1997,Argentina,56.0
+701,1998,Argentina,59.0
+702,1999,Argentina,61.0
+703,2000,Argentina,61.0
+704,2001,Argentina,56.0
+705,2002,Argentina,56.0
+706,2003,Argentina,60.0
+707,2004,Argentina,67.0
+708,2005,Argentina,66.0
+709,2006,Argentina,70.0
+710,2007,Argentina,73.0
+711,2008,Argentina,76.0
+712,2009,Argentina,70.0
+713,2010,Argentina,75.0
+714,2011,Argentina,77.0
+715,2012,Argentina,80.0
+716,2013,Argentina,82.0
+717,2014,Argentina,82.0
+718,2015,Argentina,83.0
+719,2016,Argentina,82.0
+720,2017,Argentina,82.0
+721,2018,Argentina,80.0
+722,2019,Argentina,79.0
+723,2020,Argentina,72.0
+726,1990,Canada,211.0
+727,1991,Canada,210.0
+728,1992,Canada,216.0
+729,1993,Canada,223.0
+730,1994,Canada,231.0
+731,1995,Canada,234.0
+732,1996,Canada,239.0
+733,1997,Canada,242.0
+734,1998,Canada,240.0
+735,1999,Canada,247.0
+736,2000,Canada,254.0
+737,2001,Canada,250.0
+738,2002,Canada,251.0
+739,2003,Canada,264.0
+740,2004,Canada,271.0
+741,2005,Canada,274.0
+742,2006,Canada,278.0
+743,2007,Canada,278.0
+744,2008,Canada,271.0
+745,2009,Canada,261.0
+746,2010,Canada,262.0
+747,2011,Canada,267.0
+748,2012,Canada,269.0
+749,2013,Canada,275.0
+750,2014,Canada,282.0
+751,2015,Canada,283.0
+752,2016,Canada,287.0
+753,2017,Canada,295.0
+754,2018,Canada,298.0
+755,2019,Canada,301.0
+756,2020,Canada,281.0
+759,1990,Chile,14.0
+760,1991,Chile,14.0
+761,1992,Chile,15.0
+762,1993,Chile,16.0
+763,1994,Chile,17.0
+764,1995,Chile,18.0
+765,1996,Chile,20.0
+766,1997,Chile,23.0
+767,1998,Chile,24.0
+768,1999,Chile,25.0
+769,2000,Chile,25.0
+770,2001,Chile,25.0
+771,2002,Chile,26.0
+772,2003,Chile,26.0
+773,2004,Chile,28.0
+774,2005,Chile,28.0
+775,2006,Chile,30.0
+776,2007,Chile,31.0
+777,2008,Chile,30.0
+778,2009,Chile,30.0
+779,2010,Chile,31.0
+780,2011,Chile,34.0
+781,2012,Chile,37.0
+782,2013,Chile,38.0
+783,2014,Chile,35.0
+784,2015,Chile,36.0
+785,2016,Chile,38.0
+786,2017,Chile,38.0
+787,2018,Chile,39.0
+788,2019,Chile,40.0
+789,2020,Chile,38.0
+792,1990,Colombia,24.0
+793,1991,Colombia,24.0
+794,1992,Colombia,25.0
+795,1993,Colombia,26.0
+796,1994,Colombia,27.0
+797,1995,Colombia,28.0
+798,1996,Colombia,28.0
+799,1997,Colombia,27.0
+800,1998,Colombia,29.0
+801,1999,Colombia,26.0
+802,2000,Colombia,26.0
+803,2001,Colombia,26.0
+804,2002,Colombia,25.0
+805,2003,Colombia,26.0
+806,2004,Colombia,26.0
+807,2005,Colombia,27.0
+808,2006,Colombia,29.0
+809,2007,Colombia,28.0
+810,2008,Colombia,30.0
+811,2009,Colombia,31.0
+812,2010,Colombia,30.0
+813,2011,Colombia,31.0
+814,2012,Colombia,30.0
+815,2013,Colombia,40.0
+816,2014,Colombia,40.0
+817,2015,Colombia,41.0
+818,2016,Colombia,42.0
+819,2017,Colombia,40.0
+820,2018,Colombia,39.0
+821,2019,Colombia,41.0
+822,2020,Colombia,39.0
+825,1990,Mexico,124.0
+826,1991,Mexico,130.0
+827,1992,Mexico,131.0
+828,1993,Mexico,133.0
+829,1994,Mexico,136.0
+830,1995,Mexico,132.0
+831,1996,Mexico,135.0
+832,1997,Mexico,142.0
+833,1998,Mexico,146.0
+834,1999,Mexico,150.0
+835,2000,Mexico,151.0
+836,2001,Mexico,155.0
+837,2002,Mexico,157.0
+838,2003,Mexico,168.0
+839,2004,Mexico,171.0
+840,2005,Mexico,181.0
+841,2006,Mexico,184.0
+842,2007,Mexico,183.0
+843,2008,Mexico,184.0
+844,2009,Mexico,180.0
+845,2010,Mexico,179.0
+846,2011,Mexico,187.0
+847,2012,Mexico,192.0
+848,2013,Mexico,192.0
+849,2014,Mexico,188.0
+850,2015,Mexico,185.0
+851,2016,Mexico,185.0
+852,2017,Mexico,180.0
+853,2018,Mexico,181.0
+854,2019,Mexico,176.0
+855,2020,Mexico,151.0
+858,1990,Venezuela,40.0
+859,1991,Venezuela,41.0
+860,1992,Venezuela,46.0
+861,1993,Venezuela,43.0
+862,1994,Venezuela,50.0
+863,1995,Venezuela,47.0
+864,1996,Venezuela,50.0
+865,1997,Venezuela,50.0
+866,1998,Venezuela,52.0
+867,1999,Venezuela,58.0
+868,2000,Venezuela,59.0
+869,2001,Venezuela,55.0
+870,2002,Venezuela,67.0
+871,2003,Venezuela,63.0
+872,2004,Venezuela,61.0
+873,2005,Venezuela,64.0
+874,2006,Venezuela,65.0
+875,2007,Venezuela,66.0
+876,2008,Venezuela,66.0
+877,2009,Venezuela,63.0
+878,2010,Venezuela,75.0
+879,2011,Venezuela,67.0
+880,2012,Venezuela,69.0
+881,2013,Venezuela,76.0
+882,2014,Venezuela,66.0
+883,2015,Venezuela,64.0
+884,2016,Venezuela,59.0
+885,2017,Venezuela,56.0
+886,2018,Venezuela,42.0
+887,2019,Venezuela,36.0
+888,2020,Venezuela,29.0
+891,1990,Indonesia,99.0
+892,1991,Indonesia,103.0
+893,1992,Indonesia,108.0
+894,1993,Indonesia,119.0
+895,1994,Indonesia,119.0
+896,1995,Indonesia,131.0
+897,1996,Indonesia,136.0
+898,1997,Indonesia,140.0
+899,1998,Indonesia,137.0
+900,1999,Indonesia,144.0
+901,2000,Indonesia,156.0
+902,2001,Indonesia,159.0
+903,2002,Indonesia,165.0
+904,2003,Indonesia,165.0
+905,2004,Indonesia,176.0
+906,2005,Indonesia,179.0
+907,2006,Indonesia,183.0
+908,2007,Indonesia,182.0
+909,2008,Indonesia,185.0
+910,2009,Indonesia,196.0
+911,2010,Indonesia,202.0
+912,2011,Indonesia,205.0
+913,2012,Indonesia,204.0
+914,2013,Indonesia,197.0
+915,2014,Indonesia,206.0
+916,2015,Indonesia,204.0
+917,2016,Indonesia,209.0
+918,2017,Indonesia,222.0
+919,2018,Indonesia,231.0
+920,2019,Indonesia,237.0
+921,2020,Indonesia,225.0
+924,1990,Japan,440.0
+925,1991,Japan,445.0
+926,1992,Japan,455.0
+927,1993,Japan,458.0
+928,1994,Japan,483.0
+929,1995,Japan,495.0
+930,1996,Japan,506.0
+931,1997,Japan,511.0
+932,1998,Japan,502.0
+933,1999,Japan,510.0
+934,2000,Japan,520.0
+935,2001,Japan,511.0
+936,2002,Japan,513.0
+937,2003,Japan,509.0
+938,2004,Japan,526.0
+939,2005,Japan,524.0
+940,2006,Japan,524.0
+941,2007,Japan,519.0
+942,2008,Japan,500.0
+943,2009,Japan,477.0
+944,2010,Japan,503.0
+945,2011,Japan,466.0
+946,2012,Japan,456.0
+947,2013,Japan,457.0
+948,2014,Japan,442.0
+949,2015,Japan,434.0
+950,2016,Japan,429.0
+951,2017,Japan,434.0
+952,2018,Japan,428.0
+953,2019,Japan,416.0
+954,2020,Japan,386.0
+957,1990,Malaysia,21.0
+958,1991,Malaysia,26.0
+959,1992,Malaysia,29.0
+960,1993,Malaysia,32.0
+961,1994,Malaysia,32.0
+962,1995,Malaysia,34.0
+963,1996,Malaysia,38.0
+964,1997,Malaysia,44.0
+965,1998,Malaysia,42.0
+966,1999,Malaysia,42.0
+967,2000,Malaysia,48.0
+968,2001,Malaysia,51.0
+969,2002,Malaysia,52.0
+970,2003,Malaysia,56.0
+971,2004,Malaysia,60.0
+972,2005,Malaysia,66.0
+973,2006,Malaysia,66.0
+974,2007,Malaysia,73.0
+975,2008,Malaysia,76.0
+976,2009,Malaysia,72.0
+977,2010,Malaysia,73.0
+978,2011,Malaysia,76.0
+979,2012,Malaysia,77.0
+980,2013,Malaysia,87.0
+981,2014,Malaysia,89.0
+982,2015,Malaysia,85.0
+983,2016,Malaysia,88.0
+984,2017,Malaysia,85.0
+985,2018,Malaysia,94.0
+986,2019,Malaysia,96.0
+987,2020,Malaysia,88.0
+990,1990,South Korea,94.0
+991,1991,South Korea,101.0
+992,1992,South Korea,111.0
+993,1993,South Korea,125.0
+994,1994,South Korea,133.0
+995,1995,South Korea,146.0
+996,1996,South Korea,158.0
+997,1997,South Korea,172.0
+998,1998,South Korea,158.0
+999,1999,South Korea,174.0
+1000,2000,South Korea,190.0
+1001,2001,South Korea,193.0
+1002,2002,South Korea,201.0
+1003,2003,South Korea,206.0
+1004,2004,South Korea,212.0
+1005,2005,South Korea,214.0
+1006,2006,South Korea,218.0
+1007,2007,South Korea,227.0
+1008,2008,South Korea,232.0
+1009,2009,South Korea,234.0
+1010,2010,South Korea,256.0
+1011,2011,South Korea,267.0
+1012,2012,South Korea,271.0
+1013,2013,South Korea,272.0
+1014,2014,South Korea,277.0
+1015,2015,South Korea,283.0
+1016,2016,South Korea,293.0
+1017,2017,South Korea,295.0
+1018,2018,South Korea,296.0
+1019,2019,South Korea,293.0
+1020,2020,South Korea,283.0
+1023,1990,Taiwan,48.0
+1024,1991,Taiwan,52.0
+1025,1992,Taiwan,54.0
+1026,1993,Taiwan,58.0
+1027,1994,Taiwan,60.0
+1028,1995,Taiwan,63.0
+1029,1996,Taiwan,67.0
+1030,1997,Taiwan,71.0
+1031,1998,Taiwan,75.0
+1032,1999,Taiwan,79.0
+1033,2000,Taiwan,85.0
+1034,2001,Taiwan,86.0
+1035,2002,Taiwan,90.0
+1036,2003,Taiwan,94.0
+1037,2004,Taiwan,96.0
+1038,2005,Taiwan,98.0
+1039,2006,Taiwan,100.0
+1040,2007,Taiwan,105.0
+1041,2008,Taiwan,101.0
+1042,2009,Taiwan,100.0
+1043,2010,Taiwan,106.0
+1044,2011,Taiwan,105.0
+1045,2012,Taiwan,105.0
+1046,2013,Taiwan,107.0
+1047,2014,Taiwan,109.0
+1048,2015,Taiwan,107.0
+1049,2016,Taiwan,109.0
+1050,2017,Taiwan,107.0
+1051,2018,Taiwan,110.0
+1052,2019,Taiwan,108.0
+1053,2020,Taiwan,105.0
+1056,1990,Thailand,42.0
+1057,1991,Thailand,46.0
+1058,1992,Thailand,49.0
+1059,1993,Thailand,51.0
+1060,1994,Thailand,57.0
+1061,1995,Thailand,62.0
+1062,1996,Thailand,69.0
+1063,1997,Thailand,71.0
+1064,1998,Thailand,66.0
+1065,1999,Thailand,71.0
+1066,2000,Thailand,72.0
+1067,2001,Thailand,74.0
+1068,2002,Thailand,82.0
+1069,2003,Thailand,89.0
+1070,2004,Thailand,96.0
+1071,2005,Thailand,99.0
+1072,2006,Thailand,101.0
+1073,2007,Thailand,105.0
+1074,2008,Thailand,108.0
+1075,2009,Thailand,108.0
+1076,2010,Thailand,118.0
+1077,2011,Thailand,118.0
+1078,2012,Thailand,126.0
+1079,2013,Thailand,136.0
+1080,2014,Thailand,136.0
+1081,2015,Thailand,136.0
+1082,2016,Thailand,139.0
+1083,2017,Thailand,139.0
+1084,2018,Thailand,136.0
+1085,2019,Thailand,137.0
+1086,2020,Thailand,125.0
+1089,1990,India,306.0
+1090,1991,India,318.0
+1091,1992,India,330.0
+1092,1993,India,338.0
+1093,1994,India,351.0
+1094,1995,India,371.0
+1095,1996,India,383.0
+1096,1997,India,398.0
+1097,1998,India,407.0
+1098,1999,India,431.0
+1099,2000,India,441.0
+1100,2001,India,448.0
+1101,2002,India,462.0
+1102,2003,India,474.0
+1103,2004,India,500.0
+1104,2005,India,515.0
+1105,2006,India,533.0
+1106,2007,India,568.0
+1107,2008,India,604.0
+1108,2009,India,663.0
+1109,2010,India,701.0
+1110,2011,India,734.0
+1111,2012,India,766.0
+1112,2013,India,779.0
+1113,2014,India,822.0
+1114,2015,India,835.0
+1115,2016,India,852.0
+1116,2017,India,883.0
+1117,2018,India,919.0
+1118,2019,India,940.0
+1119,2020,India,908.0
+1122,1990,Australia,86.0
+1123,1991,Australia,85.0
+1124,1992,Australia,87.0
+1125,1993,Australia,91.0
+1126,1994,Australia,91.0
+1127,1995,Australia,93.0
+1128,1996,Australia,99.0
+1129,1997,Australia,101.0
+1130,1998,Australia,104.0
+1131,1999,Australia,106.0
+1132,2000,Australia,108.0
+1133,2001,Australia,106.0
+1134,2002,Australia,109.0
+1135,2003,Australia,111.0
+1136,2004,Australia,113.0
+1137,2005,Australia,113.0
+1138,2006,Australia,118.0
+1139,2007,Australia,121.0
+1140,2008,Australia,126.0
+1141,2009,Australia,126.0
+1142,2010,Australia,126.0
+1143,2011,Australia,127.0
+1144,2012,Australia,126.0
+1145,2013,Australia,127.0
+1146,2014,Australia,127.0
+1147,2015,Australia,127.0
+1148,2016,Australia,127.0
+1149,2017,Australia,128.0
+1150,2018,Australia,128.0
+1151,2019,Australia,129.0
+1152,2020,Australia,126.0
+1155,1990,New Zealand,14.0
+1156,1991,New Zealand,14.0
+1157,1992,New Zealand,14.0
+1158,1993,New Zealand,15.0
+1159,1994,New Zealand,15.0
+1160,1995,New Zealand,15.0
+1161,1996,New Zealand,16.0
+1162,1997,New Zealand,16.0
+1163,1998,New Zealand,16.0
+1164,1999,New Zealand,17.0
+1165,2000,New Zealand,17.0
+1166,2001,New Zealand,17.0
+1167,2002,New Zealand,17.0
+1168,2003,New Zealand,17.0
+1169,2004,New Zealand,18.0
+1170,2005,New Zealand,17.0
+1171,2006,New Zealand,17.0
+1172,2007,New Zealand,17.0
+1173,2008,New Zealand,18.0
+1174,2009,New Zealand,18.0
+1175,2010,New Zealand,19.0
+1176,2011,New Zealand,18.0
+1177,2012,New Zealand,19.0
+1178,2013,New Zealand,19.0
+1179,2014,New Zealand,21.0
+1180,2015,New Zealand,21.0
+1181,2016,New Zealand,21.0
+1182,2017,New Zealand,21.0
+1183,2018,New Zealand,20.0
+1184,2019,New Zealand,21.0
+1185,2020,New Zealand,21.0
+1188,1990,Algeria,22.0
+1189,1991,Algeria,23.0
+1190,1992,Algeria,24.0
+1191,1993,Algeria,24.0
+1192,1994,Algeria,23.0
+1193,1995,Algeria,24.0
+1194,1996,Algeria,23.0
+1195,1997,Algeria,24.0
+1196,1998,Algeria,25.0
+1197,1999,Algeria,27.0
+1198,2000,Algeria,27.0
+1199,2001,Algeria,27.0
+1200,2002,Algeria,29.0
+1201,2003,Algeria,31.0
+1202,2004,Algeria,31.0
+1203,2005,Algeria,32.0
+1204,2006,Algeria,35.0
+1205,2007,Algeria,37.0
+1206,2008,Algeria,37.0
+1207,2009,Algeria,41.0
+1208,2010,Algeria,42.0
+1209,2011,Algeria,43.0
+1210,2012,Algeria,47.0
+1211,2013,Algeria,49.0
+1212,2014,Algeria,54.0
+1213,2015,Algeria,56.0
+1214,2016,Algeria,56.0
+1215,2017,Algeria,57.0
+1216,2018,Algeria,61.0
+1217,2019,Algeria,65.0
+1218,2020,Algeria,59.0
+1221,1990,Egypt,33.0
+1222,1991,Egypt,33.0
+1223,1992,Egypt,34.0
+1224,1993,Egypt,35.0
+1225,1994,Egypt,34.0
+1226,1995,Egypt,36.0
+1227,1996,Egypt,38.0
+1228,1997,Egypt,40.0
+1229,1998,Egypt,42.0
+1230,1999,Egypt,43.0
+1231,2000,Egypt,41.0
+1232,2001,Egypt,47.0
+1233,2002,Egypt,48.0
+1234,2003,Egypt,50.0
+1235,2004,Egypt,54.0
+1236,2005,Egypt,62.0
+1237,2006,Egypt,66.0
+1238,2007,Egypt,70.0
+1239,2008,Egypt,73.0
+1240,2009,Egypt,75.0
+1241,2010,Egypt,74.0
+1242,2011,Egypt,77.0
+1243,2012,Egypt,79.0
+1244,2013,Egypt,78.0
+1245,2014,Egypt,80.0
+1246,2015,Egypt,81.0
+1247,2016,Egypt,88.0
+1248,2017,Egypt,93.0
+1249,2018,Egypt,96.0
+1250,2019,Egypt,97.0
+1251,2020,Egypt,92.0
+1254,1990,Nigeria,66.0
+1255,1991,Nigeria,70.0
+1256,1992,Nigeria,72.0
+1257,1993,Nigeria,74.0
+1258,1994,Nigeria,72.0
+1259,1995,Nigeria,73.0
+1260,1996,Nigeria,76.0
+1261,1997,Nigeria,79.0
+1262,1998,Nigeria,80.0
+1263,1999,Nigeria,83.0
+1264,2000,Nigeria,87.0
+1265,2001,Nigeria,91.0
+1266,2002,Nigeria,94.0
+1267,2003,Nigeria,98.0
+1268,2004,Nigeria,99.0
+1269,2005,Nigeria,105.0
+1270,2006,Nigeria,106.0
+1271,2007,Nigeria,110.0
+1272,2008,Nigeria,113.0
+1273,2009,Nigeria,111.0
+1274,2010,Nigeria,127.0
+1275,2011,Nigeria,139.0
+1276,2012,Nigeria,140.0
+1277,2013,Nigeria,143.0
+1278,2014,Nigeria,147.0
+1279,2015,Nigeria,145.0
+1280,2016,Nigeria,150.0
+1281,2017,Nigeria,152.0
+1282,2018,Nigeria,160.0
+1283,2019,Nigeria,157.0
+1284,2020,Nigeria,159.0
+1287,1990,South Africa,90.0
+1288,1991,South Africa,92.0
+1289,1992,South Africa,88.0
+1290,1993,South Africa,94.0
+1291,1994,South Africa,98.0
+1292,1995,South Africa,104.0
+1293,1996,South Africa,107.0
+1294,1997,South Africa,109.0
+1295,1998,South Africa,111.0
+1296,1999,South Africa,109.0
+1297,2000,South Africa,109.0
+1298,2001,South Africa,105.0
+1299,2002,South Africa,100.0
+1300,2003,South Africa,113.0
+1301,2004,South Africa,123.0
+1302,2005,South Africa,118.0
+1303,2006,South Africa,120.0
+1304,2007,South Africa,131.0
+1305,2008,South Africa,142.0
+1306,2009,South Africa,144.0
+1307,2010,South Africa,134.0
+1308,2011,South Africa,137.0
+1309,2012,South Africa,131.0
+1310,2013,South Africa,130.0
+1311,2014,South Africa,138.0
+1312,2015,South Africa,129.0
+1313,2016,South Africa,135.0
+1314,2017,South Africa,136.0
+1315,2018,South Africa,134.0
+1316,2019,South Africa,129.0
+1317,2020,South Africa,124.0
+1320,1990,Iran,69.0
+1321,1991,Iran,77.0
+1322,1992,Iran,81.0
+1323,1993,Iran,87.0
+1324,1994,Iran,97.0
+1325,1995,Iran,101.0
+1326,1996,Iran,98.0
+1327,1997,Iran,109.0
+1328,1998,Iran,111.0
+1329,1999,Iran,126.0
+1330,2000,Iran,123.0
+1331,2001,Iran,133.0
+1332,2002,Iran,138.0
+1333,2003,Iran,143.0
+1334,2004,Iran,156.0
+1335,2005,Iran,173.0
+1336,2006,Iran,180.0
+1337,2007,Iran,191.0
+1338,2008,Iran,205.0
+1339,2009,Iran,204.0
+1340,2010,Iran,204.0
+1341,2011,Iran,208.0
+1342,2012,Iran,218.0
+1343,2013,Iran,222.0
+1344,2014,Iran,238.0
+1345,2015,Iran,238.0
+1346,2016,Iran,246.0
+1347,2017,Iran,262.0
+1348,2018,Iran,266.0
+1349,2019,Iran,269.0
+1350,2020,Iran,268.0
+1353,1990,Kuwait,9.0
+1354,1991,Kuwait,3.0
+1355,1992,Kuwait,9.0
+1356,1993,Kuwait,12.0
+1357,1994,Kuwait,14.0
+1358,1995,Kuwait,15.0
+1359,1996,Kuwait,14.0
+1360,1997,Kuwait,15.0
+1361,1998,Kuwait,17.0
+1362,1999,Kuwait,18.0
+1363,2000,Kuwait,19.0
+1364,2001,Kuwait,20.0
+1365,2002,Kuwait,20.0
+1366,2003,Kuwait,21.0
+1367,2004,Kuwait,24.0
+1368,2005,Kuwait,27.0
+1369,2006,Kuwait,25.0
+1370,2007,Kuwait,25.0
+1371,2008,Kuwait,28.0
+1372,2009,Kuwait,29.0
+1373,2010,Kuwait,29.0
+1374,2011,Kuwait,28.0
+1375,2012,Kuwait,29.0
+1376,2013,Kuwait,30.0
+1377,2014,Kuwait,27.0
+1378,2015,Kuwait,33.0
+1379,2016,Kuwait,36.0
+1380,2017,Kuwait,34.0
+1381,2018,Kuwait,34.0
+1382,2019,Kuwait,36.0
+1383,2020,Kuwait,38.0
+1386,1990,Saudi Arabia,58.0
+1387,1991,Saudi Arabia,68.0
+1388,1992,Saudi Arabia,77.0
+1389,1993,Saudi Arabia,80.0
+1390,1994,Saudi Arabia,84.0
+1391,1995,Saudi Arabia,85.0
+1392,1996,Saudi Arabia,90.0
+1393,1997,Saudi Arabia,86.0
+1394,1998,Saudi Arabia,92.0
+1395,1999,Saudi Arabia,94.0
+1396,2000,Saudi Arabia,98.0
+1397,2001,Saudi Arabia,100.0
+1398,2002,Saudi Arabia,114.0
+1399,2003,Saudi Arabia,115.0
+1400,2004,Saudi Arabia,115.0
+1401,2005,Saudi Arabia,123.0
+1402,2006,Saudi Arabia,132.0
+1403,2007,Saudi Arabia,138.0
+1404,2008,Saudi Arabia,151.0
+1405,2009,Saudi Arabia,159.0
+1406,2010,Saudi Arabia,175.0
+1407,2011,Saudi Arabia,184.0
+1408,2012,Saudi Arabia,189.0
+1409,2013,Saudi Arabia,188.0
+1410,2014,Saudi Arabia,207.0
+1411,2015,Saudi Arabia,216.0
+1412,2016,Saudi Arabia,215.0
+1413,2017,Saudi Arabia,219.0
+1414,2018,Saudi Arabia,214.0
+1415,2019,Saudi Arabia,215.0
+1416,2020,Saudi Arabia,209.0
+1419,1990,United Arab Emirates,20.0
+1420,1991,United Arab Emirates,23.0
+1421,1992,United Arab Emirates,22.0
+1422,1993,United Arab Emirates,23.0
+1423,1994,United Arab Emirates,26.0
+1424,1995,United Arab Emirates,28.0
+1425,1996,United Arab Emirates,29.0
+1426,1997,United Arab Emirates,31.0
+1427,1998,United Arab Emirates,32.0
+1428,1999,United Arab Emirates,32.0
+1429,2000,United Arab Emirates,31.0
+1430,2001,United Arab Emirates,40.0
+1431,2002,United Arab Emirates,39.0
+1432,2003,United Arab Emirates,38.0
+1433,2004,United Arab Emirates,42.0
+1434,2005,United Arab Emirates,44.0
+1435,2006,United Arab Emirates,46.0
+1436,2007,United Arab Emirates,50.0
+1437,2008,United Arab Emirates,59.0
+1438,2009,United Arab Emirates,64.0
+1439,2010,United Arab Emirates,61.0
+1440,2011,United Arab Emirates,60.0
+1441,2012,United Arab Emirates,64.0
+1442,2013,United Arab Emirates,68.0
+1443,2014,United Arab Emirates,74.0
+1444,2015,United Arab Emirates,76.0
+1445,2016,United Arab Emirates,79.0
+1446,2017,United Arab Emirates,78.0
+1447,2018,United Arab Emirates,78.0
+1448,2019,United Arab Emirates,83.0
+1449,2020,United Arab Emirates,81.0
