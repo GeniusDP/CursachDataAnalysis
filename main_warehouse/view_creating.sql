@@ -33,17 +33,34 @@ WHERE (ENERGY_CONSUMPTION IS NOT NULL)
 
 
 --******************************************************************************************************
---create view deaths_reasons_influence as
-    select
-           c.name as country_name,
-           year,
-           dr.name as reason,
-           count,
-           happiness_score
-    from adiscoursework.happiness_report
-    inner join adiscoursework.death_report
-        on (adiscoursework.happiness_report.date_id = adiscoursework.death_report.date_id)
-            and (adiscoursework.happiness_report.country_id = adiscoursework.death_report.country_id)
-    inner join adiscoursework.country c on c.id = adiscoursework.death_report.country_id
-    inner join adiscoursework.date d on d.id = adiscoursework.death_report.date_id
-    inner join adiscoursework.death_reason dr on dr.id = adiscoursework.death_report.reason_id;
+create view deaths_reasons_influence_on_happiness as
+SELECT (SELECT name FROM adiscoursework.country WHERE country_id = adiscoursework.country.id) AS country_name,
+       (SELECT year FROM adiscoursework.date WHERE date_id = adiscoursework.date.id) AS year,
+       "Self-harm"                               ,
+    "Interpersonal violence"                     ,
+    "Drowning"                                   ,
+    "Malaria"                                    ,
+    "Fire, heat, and hot substances"             ,
+    "Neoplasms"                                  ,
+    "Digestive diseases"                         ,
+    "Cirrhosis and other chronic liver diseases" ,
+    "Chronic respiratory diseases"               ,
+    "Chronic kidney disease"                     ,
+    "Cardiovascular diseases"                    ,
+    "Drug use disorders"                         ,
+    "Nutritional deficiencies"                   ,
+    "Alcohol use disorders"                      ,
+    "Lower respiratory infections"               ,
+    "Diabetes mellitus"                          ,
+    "Protein-energy malnutrition"                ,
+    "Exposure to forces of nature"               ,
+    "Environmental heat and cold exposure"       ,
+    "Diarrheal diseases"                         ,
+    "Road injuries"                              ,
+    "Tuberculosis"                               ,
+    "HIV/AIDS"                                   ,
+    "Alzheimer's disease and other dementias"    ,
+    "Parkinson's disease"                        ,
+    "Acute hepatitis"                            ,
+    happiness_score
+FROM adiscoursework.death_report

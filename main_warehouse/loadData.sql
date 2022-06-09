@@ -27,18 +27,7 @@ WITH years AS (
 INSERT INTO adiscoursework.date (year)
 SELECT DISTINCT(year) FROM years;
 
-INSERT INTO adiscoursework.death_reason(name, total)
-SELECT reason AS name, SUM(count) AS total FROM stagecoursework.death_reasons
-GROUP BY reason;
-
-INSERT INTO adiscoursework.death_report(date_id, country_id, reason_id, count)
-SELECT (SELECT id FROM adiscoursework.date WHERE "Year" = year) AS date_id,
-       (SELECT id FROM adiscoursework.country WHERE "Country" = name) AS country_id,
-       (SELECT id FROM adiscoursework.death_reason WHERE name = reason) AS reason_id,
-       count
-FROM stagecoursework.death_reasons;
-
-INSERT INTO adiscoursework.happiness_report(date_id, country_id, happiness_score, gdp, social_support, life_expectancy, freedom, trust, generosity, energy_consumption, total_deaths)
+INSERT INTO adiscoursework.happiness_report(date_id, country_id, happiness_score, gdp, social_support, life_expectancy, freedom, trust, generosity, energy_consumption)
 SELECT (SELECT id FROM adiscoursework.date WHERE "Year" = year),
        (SELECT id FROM adiscoursework.country WHERE "Country" = name),
        "Happiness Score",
@@ -48,6 +37,39 @@ SELECT (SELECT id FROM adiscoursework.date WHERE "Year" = year),
        "Freedom",
        "Trust (Government Corruption)",
        "Generosity",
-       (SELECT "Consumption" FROM stagecoursework.country_consumption WHERE country_consumption."Year" = happiness."Year" AND country_consumption."Country" = happiness."Country"),
-       (SELECT SUM(count) FROM stagecoursework.death_reasons WHERE happiness."Year" = death_reasons."Year" AND happiness."Country" = death_reasons."Country")
+       (SELECT "Consumption" FROM stagecoursework.country_consumption WHERE country_consumption."Year" = happiness."Year" AND country_consumption."Country" = happiness."Country")
 FROM stagecoursework.happiness;
+
+INSERT INTO adiscoursework.death_report(country_id, date_id, "Self-harm", "Interpersonal violence", "Drowning", "Malaria", "Fire, heat, and hot substances", "Neoplasms", "Digestive diseases", "Cirrhosis and other chronic liver diseases", "Chronic respiratory diseases", "Chronic kidney disease", "Cardiovascular diseases", "Drug use disorders", "Nutritional deficiencies", "Alcohol use disorders", "Lower respiratory infections", "Diabetes mellitus", "Protein-energy malnutrition", "Exposure to forces of nature", "Environmental heat and cold exposure", "Diarrheal diseases", "Road injuries", "Tuberculosis", "HIV/AIDS", "Alzheimer's disease and other dementias", "Parkinson's disease", "Acute hepatitis", happiness_score)
+SELECT (SELECT id FROM adiscoursework.country WHERE "Country" = name),
+       (SELECT id FROM adiscoursework.date WHERE "Year" = year),
+       "Self-harm",
+       "Interpersonal violence",
+       "Drowning", "Malaria",
+       "Fire, heat, and hot substances",
+       "Neoplasms",
+       "Digestive diseases",
+       "Cirrhosis and other chronic liver diseases",
+       "Chronic respiratory diseases",
+       "Chronic kidney disease",
+       "Cardiovascular diseases",
+       "Drug use disorders",
+       "Nutritional deficiencies",
+       "Alcohol use disorders",
+       "Lower respiratory infections",
+       "Diabetes mellitus",
+       "Protein-energy malnutrition",
+       "Exposure to forces of nature",
+       "Environmental heat and cold exposure",
+       "Diarrheal diseases",
+       "Road injuries",
+       "Tuberculosis",
+       "HIV/AIDS",
+       "Alzheimer's disease and other dementias",
+       "Parkinson's disease",
+       "Acute hepatitis",
+       happiness_score
+FROM stagecoursework.death_reasons
+inner join adiscoursework.happiness_report
+    on "Year" = (SELECT year FROM adiscoursework.date WHERE date_id = adiscoursework.date.id) AND
+       "Country" = (SELECT name FROM adiscoursework.country WHERE country_id = adiscoursework.country.id);

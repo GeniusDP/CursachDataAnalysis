@@ -14,5 +14,5 @@ df = df.groupby(['Country', 'Year']).sum()
 df.to_csv('../main_warehouse/death_reasons.csv')
 
 df = pd.read_csv('../main_warehouse/death_reasons.csv', sep=',', decimal='.', encoding='cp1252')
-df = df.melt(id_vars=['Country', 'Year'], var_name="reason", value_name="count")
+# df = df.melt(id_vars=['Country', 'Year'], var_name="reason", value_name="count")
 df.to_csv('../main_warehouse/death_reasons.csv')
