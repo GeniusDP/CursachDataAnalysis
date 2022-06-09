@@ -1,3 +1,4 @@
+import numpy as np
 import pandas as pd
 
 # configurations
@@ -11,6 +12,7 @@ def convert_column_to_float(dataset, column_label):
 
 
 df = pd.read_csv('../stage_zone/world-happiness-report-2015-2022-cleaned.csv', sep=',', decimal='.', encoding='cp1252')
+
 
 convert_column_to_float(df, 'Happiness Score')
 convert_column_to_float(df, 'Economy (GDP per Capita)')

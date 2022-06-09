@@ -33,9 +33,7 @@ def main_work(df):
     x = []
     for i in range(0, df.__len__()):
         tmp = df.loc[i].to_numpy()
-        tmp = np.delete(tmp, 8, 0)
-        tmp = np.delete(tmp, 0, 0)
-        tmp = np.delete(tmp, 0, 0)
+        tmp = np.delete(tmp, df.columns.size - 1, 0)
         x.append(tmp)
     y = df['happiness_score'].to_numpy()
 
@@ -47,7 +45,6 @@ def main_work(df):
     printProjection(df, reg, 'social_support', 1000)
     printProjection(df, reg, 'freedom', 1000)
     printProjection(df, reg, 'generosity', 1000)
-    printProjection(df, reg, 'total_deaths', 1000)
     pass
 
 
@@ -55,20 +52,15 @@ def printProjection(df, regression, argument_name, detalization):
     xReg = []
 
     argument_position = df.columns.tolist().index(argument_name)
-    print(argument_position)
     max_value = df[argument_name].max()
     step = max_value / detalization
     arg_value = 0
-    print('step = ', step)
-    print('max_value = ', max_value)
     while arg_value <= max_value:
-        tmp = [0, 0, 0, 0, 0, 0]
-        tmp[argument_position-2] = arg_value
+        tmp = [0, 0, 0, 0, 0]
+        tmp[argument_position] = arg_value
         xReg.append(tmp)
         arg_value += step
 
-    print('xReg size = ', len(xReg))
-    print('predict size = ', len(regression.predict(xReg)))
     plt.figure(figsize=(5, 5))
     plt.title('Regression')
     plt.xlabel(argument_name)
@@ -84,20 +76,10 @@ def printProjection(df, regression, argument_name, detalization):
 
 # program
 df = pd.read_csv('../data/main_view.csv', sep=',', decimal='.')
-# print(df.info())
+print(df.info())
+
+df.drop(columns=['country_name', 'year'], inplace=True)
+
 print(df.corr())
 
 main_work(df)
-
-# xReg = []
-# for i in range(0, df.__len__()):
-#     tmp = df.loc[i].to_numpy()
-#     tmp = np.delete(tmp, 8, 0)
-#     tmp = np.delete(tmp, 0, 0)
-#     tmp = np.delete(tmp, 0, 0)
-#     tmp[1] = tmp[2] = tmp[3] = tmp[4] = tmp[5] = 0
-#     xReg.append(tmp)
-# print(xReg)
-#
-# print( xReg[0] )
-# print( reg.predict([xReg[0]]) )

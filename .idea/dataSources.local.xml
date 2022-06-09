@@ -16,9 +16,9 @@
             </node>
             <node kind="database" qname="adis_cursach">
               <node kind="schema">
-                <name qname="adiscoursework" />
                 <name qname="public" />
                 <name qname="stagecoursework" />
+                <name qname="adiscoursework" />
               </node>
             </node>
           </node>

@@ -15,4 +15,6 @@ df = df.melt(id_vars=["Year"],
 df = df.dropna(inplace=False)
 df['Year'] = df['Year'].astype(int)
 
+
+
 df.to_csv('../main_warehouse/country_consumption.csv')

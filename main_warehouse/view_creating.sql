@@ -1,28 +1,31 @@
-drop view if exists adiscoursework.main_view;
+DROP VIEW IF EXISTS ADISCOURSEWORK.MAIN_VIEW;
 
-create view adiscoursework.main_view AS
-select
-       name country_name,
-       year,
-       gdp,
-       social_support,
-       freedom,
-       trust,
-       generosity,
-       total_deaths,
-       happiness_score
-from adiscoursework.happiness_report
-inner join adiscoursework.date d on d.id = adiscoursework.happiness_report.date_id
-inner join adiscoursework.country c on c.id = adiscoursework.happiness_report.country_id
-where (energy_consumption is not null)
-  AND (year >= 2015 )
-  AND (year <= 2019)
-  AND (total_deaths is not null);
---AND (total_deaths <= 3000000);
+CREATE VIEW ADISCOURSEWORK.MAIN_VIEW AS
+SELECT
+       NAME COUNTRY_NAME,
+       YEAR,
+       GDP,
+       SOCIAL_SUPPORT,
+       FREEDOM,
+       --ENERGY_CONSUMPTION/(AVERAGE_POPULATION::REAL - (2020-YEAR) * C.NET_POPULATION_CHANGE) as ENERGY_CONSUMPTION_PER_CAPITA,
+       TRUST,
+       GENEROSITY,
+       --(TOTAL_DEATHS::REAL)/(AVERAGE_POPULATION::REAL - (2020-YEAR) * C.NET_POPULATION_CHANGE) AS DEATHS_PER_CAPITA,
+       --AREA,
+       --(AVERAGE_POPULATION::REAL - (2020-YEAR) * C.NET_POPULATION_CHANGE) / AREA AS POPULATION_DENSITY,
+       HAPPINESS_SCORE
+FROM ADISCOURSEWORK.HAPPINESS_REPORT
+INNER JOIN ADISCOURSEWORK.DATE D ON D.ID = ADISCOURSEWORK.HAPPINESS_REPORT.DATE_ID
+INNER JOIN ADISCOURSEWORK.COUNTRY C ON C.ID = ADISCOURSEWORK.HAPPINESS_REPORT.COUNTRY_ID
+WHERE (ENERGY_CONSUMPTION IS NOT NULL)
+  AND (YEAR >= 2015 )
+  AND (YEAR <= 2019)
+  AND (TOTAL_DEATHS IS NOT NULL)
+  AND (AREA IS NOT NULL);
 
 /*
     1)дропнули life_expectancy - большая corr с gdp.
-    2)дропнули energy_consumption - большая corr с total_deaths
+    2)дропнули energy_consumption_per_capita - большая corr с gdp
 */
 
 -- \copy (SELECT * FROM adiscoursework.main_view) TO 'C:\Users\Asus\Desktop\Лабы2022\CursachDataAnalysis\main_view.csv' with csv header

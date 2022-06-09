@@ -793,7 +793,7 @@ false Z
 false Zulu
 true posixrules
 </TimeZones>
-      <IntrospectionStateNumber>10018</IntrospectionStateNumber>
+      <IntrospectionStateNumber>10232</IntrospectionStateNumber>
       <StartupTime>1654492746</StartupTime>
     </root>
     <database id="2" parent="1" name="adis_cursach">
@@ -810,13 +810,13 @@ true posixrules
 12716||-9223372036854775808|U|G
 12716||10|U|G</Grants>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>10019</IntrospectionStateNumber>
-      <Relations>sequence|table|33572|33574|1
-sequence|table|33580|33582|1
-sequence|table|33590|33592|1
-sequence|table|33605|33607|1
-sequence|table|33623|33625|1
-sequence|table|33631|33633|1
+      <IntrospectionStateNumber>10233</IntrospectionStateNumber>
+      <Relations>sequence|table|34099|34101|1
+sequence|table|34107|34109|1
+sequence|table|34117|34119|1
+sequence|table|34132|34134|1
+sequence|table|34150|34152|1
+sequence|table|34158|34160|1
 </Relations>
     </database>
     <database id="3" parent="1" name="adis_end_variant">
@@ -861,7 +861,7 @@ sequence|table|33631|33633|1
 12716||-9223372036854775808|U|G
 12716||10|U|G</Grants>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>9935</IntrospectionStateNumber>
+      <IntrospectionStateNumber>10053</IntrospectionStateNumber>
       <Current>1</Current>
     </database>
     <database id="10" parent="1" name="shopme">
@@ -933,10 +933,10 @@ sequence|table|33631|33633|1
       <StateNumber>1</StateNumber>
     </tablespace>
     <schema id="27" parent="2" name="adiscoursework">
-      <ObjectId>33571</ObjectId>
-      <StateNumber>9851</StateNumber>
+      <ObjectId>34098</ObjectId>
+      <StateNumber>10185</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>10019</IntrospectionStateNumber>
+      <IntrospectionStateNumber>10233</IntrospectionStateNumber>
     </schema>
     <schema id="28" parent="2" name="information_schema">
       <ObjectId>12716</ObjectId>
@@ -954,14 +954,14 @@ sequence|table|33631|33633|1
       <Comment>standard public schema</Comment>
       <StateNumber>360</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>10019</IntrospectionStateNumber>
+      <IntrospectionStateNumber>10233</IntrospectionStateNumber>
       <Current>1</Current>
     </schema>
     <schema id="31" parent="2" name="stagecoursework">
       <ObjectId>33570</ObjectId>
       <StateNumber>9850</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>10019</IntrospectionStateNumber>
+      <IntrospectionStateNumber>10233</IntrospectionStateNumber>
     </schema>
     <extension id="32" parent="2" name="plpgsql">
       <ObjectId>12998</ObjectId>
@@ -1069,7 +1069,7 @@ sequence|table|33631|33633|1
       <Comment>standard public schema</Comment>
       <StateNumber>2788</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>9935</IntrospectionStateNumber>
+      <IntrospectionStateNumber>10053</IntrospectionStateNumber>
       <Current>1</Current>
     </schema>
     <extension id="46" parent="9" name="adminpack">
@@ -1171,76 +1171,76 @@ sequence|table|33631|33633|1
       <HandlerId>334</HandlerId>
     </access-method>
     <sequence id="58" parent="27" name="country_id_seq">
-      <ObjectId>33590</ObjectId>
+      <ObjectId>34117</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>9854</StateNumber>
+      <StateNumber>10188</StateNumber>
       <DataType>bigint|0s</DataType>
     </sequence>
     <sequence id="59" parent="27" name="date_id_seq">
-      <ObjectId>33572</ObjectId>
+      <ObjectId>34099</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>9852</StateNumber>
+      <StateNumber>10186</StateNumber>
       <DataType>bigint|0s</DataType>
     </sequence>
     <sequence id="60" parent="27" name="death_reason_id_seq">
-      <ObjectId>33623</ObjectId>
+      <ObjectId>34150</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>9856</StateNumber>
+      <StateNumber>10190</StateNumber>
       <DataType>bigint|0s</DataType>
     </sequence>
     <sequence id="61" parent="27" name="death_report_id_seq">
-      <ObjectId>33631</ObjectId>
+      <ObjectId>34158</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>9857</StateNumber>
+      <StateNumber>10191</StateNumber>
       <DataType>bigint|0s</DataType>
     </sequence>
     <sequence id="62" parent="27" name="happiness_report_id_seq">
-      <ObjectId>33605</ObjectId>
+      <ObjectId>34132</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>9855</StateNumber>
+      <StateNumber>10189</StateNumber>
       <DataType>bigint|0s</DataType>
     </sequence>
     <sequence id="63" parent="27" name="region_id_seq">
-      <ObjectId>33580</ObjectId>
+      <ObjectId>34107</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>9853</StateNumber>
+      <StateNumber>10187</StateNumber>
       <DataType>bigint|0s</DataType>
     </sequence>
     <table id="64" parent="27" name="country">
-      <ObjectId>33592</ObjectId>
+      <ObjectId>34119</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>9854</StateNumber>
+      <StateNumber>10188</StateNumber>
     </table>
     <table id="65" parent="27" name="date">
-      <ObjectId>33574</ObjectId>
+      <ObjectId>34101</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>9855</StateNumber>
+      <StateNumber>10189</StateNumber>
     </table>
     <table id="66" parent="27" name="death_reason">
-      <ObjectId>33625</ObjectId>
+      <ObjectId>34152</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>9857</StateNumber>
+      <StateNumber>10191</StateNumber>
     </table>
     <table id="67" parent="27" name="death_report">
-      <ObjectId>33633</ObjectId>
+      <ObjectId>34160</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>9857</StateNumber>
+      <StateNumber>10191</StateNumber>
     </table>
     <table id="68" parent="27" name="happiness_report">
-      <ObjectId>33607</ObjectId>
+      <ObjectId>34134</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>9855</StateNumber>
+      <StateNumber>10189</StateNumber>
     </table>
     <table id="69" parent="27" name="region">
-      <ObjectId>33582</ObjectId>
+      <ObjectId>34109</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>9854</StateNumber>
+      <StateNumber>10188</StateNumber>
     </table>
     <view id="70" parent="27" name="main_view">
-      <ObjectId>33728</ObjectId>
-      <SourceTextLength>588</SourceTextLength>
+      <ObjectId>34202</ObjectId>
+      <SourceTextLength>576</SourceTextLength>
       <Owner>postgres</Owner>
-      <StateNumber>10016</StateNumber>
+      <StateNumber>10230</StateNumber>
     </view>
     <table id="71" parent="31" name="country_consumption">
       <ObjectId>33666</ObjectId>
@@ -1257,36 +1257,59 @@ sequence|table|33631|33633|1
       <Owner>postgres</Owner>
       <StateNumber>9864</StateNumber>
     </table>
-    <column id="74" parent="64" name="id">
+    <table id="74" parent="31" name="population_by_country">
+      <ObjectId>33738</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>10025</StateNumber>
+    </table>
+    <column id="75" parent="64" name="id">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>9854</StateNumber>
+      <StateNumber>10188</StateNumber>
       <DefaultExpression>nextval(&apos;adiscoursework.country_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>20</TypeId>
     </column>
-    <column id="75" parent="64" name="name">
+    <column id="76" parent="64" name="name">
       <Position>2</Position>
       <DataType>varchar(100)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>9854</StateNumber>
+      <StateNumber>10188</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="76" parent="64" name="iso">
+    <column id="77" parent="64" name="iso">
       <Position>3</Position>
       <DataType>varchar(10)|0s</DataType>
-      <StateNumber>9854</StateNumber>
+      <StateNumber>10188</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="77" parent="64" name="region_id">
+    <column id="78" parent="64" name="region_id">
       <Position>4</Position>
       <DataType>bigint|0s</DataType>
-      <StateNumber>9854</StateNumber>
+      <StateNumber>10188</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <index id="78" parent="64" name="country_pkey">
-      <ObjectId>33596</ObjectId>
-      <StateNumber>9854</StateNumber>
+    <column id="79" parent="64" name="area">
+      <Position>5</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>10188</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="80" parent="64" name="average_population">
+      <Position>6</Position>
+      <DataType>bigint|0s</DataType>
+      <StateNumber>10188</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="81" parent="64" name="net_population_change">
+      <Position>7</Position>
+      <DataType>bigint|0s</DataType>
+      <StateNumber>10188</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <index id="82" parent="64" name="country_pkey">
+      <ObjectId>34123</ObjectId>
+      <StateNumber>10188</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
@@ -1294,9 +1317,9 @@ sequence|table|33631|33633|1
       <ClassIds>3124</ClassIds>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <index id="79" parent="64" name="country_name_key">
-      <ObjectId>33598</ObjectId>
-      <StateNumber>9854</StateNumber>
+    <index id="83" parent="64" name="country_name_key">
+      <ObjectId>34125</ObjectId>
+      <StateNumber>10188</StateNumber>
       <ColNames>name</ColNames>
       <Unique>1</Unique>
       <CollationIds>100</CollationIds>
@@ -1304,46 +1327,46 @@ sequence|table|33631|33633|1
       <ClassIds>3126</ClassIds>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="80" parent="64" name="country_pkey">
-      <ObjectId>33597</ObjectId>
-      <StateNumber>9854</StateNumber>
+    <key id="84" parent="64" name="country_pkey">
+      <ObjectId>34124</ObjectId>
+      <StateNumber>10188</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>country_pkey</UnderlyingIndexName>
     </key>
-    <key id="81" parent="64" name="country_name_key">
-      <ObjectId>33599</ObjectId>
-      <StateNumber>9854</StateNumber>
+    <key id="85" parent="64" name="country_name_key">
+      <ObjectId>34126</ObjectId>
+      <StateNumber>10188</StateNumber>
       <ColNames>name</ColNames>
       <UnderlyingIndexName>country_name_key</UnderlyingIndexName>
     </key>
-    <foreign-key id="82" parent="64" name="country_region_id_fkey">
-      <ObjectId>33600</ObjectId>
-      <StateNumber>9854</StateNumber>
+    <foreign-key id="86" parent="64" name="country_region_id_fkey">
+      <ObjectId>34127</ObjectId>
+      <StateNumber>10188</StateNumber>
       <ColNames>region_id</ColNames>
-      <RefTableId>33582</RefTableId>
+      <RefTableId>34109</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>region</RefTableName>
       <RefKeyName>region_pkey</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="83" parent="65" name="id">
+    <column id="87" parent="65" name="id">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>9852</StateNumber>
+      <StateNumber>10186</StateNumber>
       <DefaultExpression>nextval(&apos;adiscoursework.date_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>20</TypeId>
     </column>
-    <column id="84" parent="65" name="year">
+    <column id="88" parent="65" name="year">
       <Position>2</Position>
       <DataType>integer|0s</DataType>
-      <StateNumber>9852</StateNumber>
+      <StateNumber>10186</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <index id="85" parent="65" name="date_pkey">
-      <ObjectId>33578</ObjectId>
-      <StateNumber>9852</StateNumber>
+    <index id="89" parent="65" name="date_pkey">
+      <ObjectId>34105</ObjectId>
+      <StateNumber>10186</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
@@ -1351,37 +1374,37 @@ sequence|table|33631|33633|1
       <ClassIds>3124</ClassIds>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="86" parent="65" name="date_pkey">
-      <ObjectId>33579</ObjectId>
-      <StateNumber>9852</StateNumber>
+    <key id="90" parent="65" name="date_pkey">
+      <ObjectId>34106</ObjectId>
+      <StateNumber>10186</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>date_pkey</UnderlyingIndexName>
     </key>
-    <column id="87" parent="66" name="id">
+    <column id="91" parent="66" name="id">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>9856</StateNumber>
+      <StateNumber>10190</StateNumber>
       <DefaultExpression>nextval(&apos;adiscoursework.death_reason_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>20</TypeId>
     </column>
-    <column id="88" parent="66" name="name">
+    <column id="92" parent="66" name="name">
       <Position>2</Position>
       <DataType>varchar(100)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>9856</StateNumber>
+      <StateNumber>10190</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="89" parent="66" name="total">
+    <column id="93" parent="66" name="total">
       <Position>3</Position>
       <DataType>bigint|0s</DataType>
-      <StateNumber>9856</StateNumber>
+      <StateNumber>10190</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <index id="90" parent="66" name="death_reason_pkey">
-      <ObjectId>33629</ObjectId>
-      <StateNumber>9856</StateNumber>
+    <index id="94" parent="66" name="death_reason_pkey">
+      <ObjectId>34156</ObjectId>
+      <StateNumber>10190</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
@@ -1389,51 +1412,51 @@ sequence|table|33631|33633|1
       <ClassIds>3124</ClassIds>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="91" parent="66" name="death_reason_pkey">
-      <ObjectId>33630</ObjectId>
-      <StateNumber>9856</StateNumber>
+    <key id="95" parent="66" name="death_reason_pkey">
+      <ObjectId>34157</ObjectId>
+      <StateNumber>10190</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>death_reason_pkey</UnderlyingIndexName>
     </key>
-    <column id="92" parent="67" name="id">
+    <column id="96" parent="67" name="id">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>9857</StateNumber>
+      <StateNumber>10191</StateNumber>
       <DefaultExpression>nextval(&apos;adiscoursework.death_report_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>20</TypeId>
     </column>
-    <column id="93" parent="67" name="date_id">
+    <column id="97" parent="67" name="date_id">
       <Position>2</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>9857</StateNumber>
+      <StateNumber>10191</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <column id="94" parent="67" name="country_id">
+    <column id="98" parent="67" name="country_id">
       <Position>3</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>9857</StateNumber>
+      <StateNumber>10191</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <column id="95" parent="67" name="reason_id">
+    <column id="99" parent="67" name="reason_id">
       <Position>4</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>9857</StateNumber>
+      <StateNumber>10191</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <column id="96" parent="67" name="count">
+    <column id="100" parent="67" name="count">
       <Position>5</Position>
       <DataType>integer|0s</DataType>
-      <StateNumber>9857</StateNumber>
+      <StateNumber>10191</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <index id="97" parent="67" name="death_report_pkey">
-      <ObjectId>33637</ObjectId>
-      <StateNumber>9857</StateNumber>
+    <index id="101" parent="67" name="death_report_pkey">
+      <ObjectId>34164</ObjectId>
+      <StateNumber>10191</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
@@ -1441,123 +1464,123 @@ sequence|table|33631|33633|1
       <ClassIds>3124</ClassIds>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="98" parent="67" name="death_report_pkey">
-      <ObjectId>33638</ObjectId>
-      <StateNumber>9857</StateNumber>
+    <key id="102" parent="67" name="death_report_pkey">
+      <ObjectId>34165</ObjectId>
+      <StateNumber>10191</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>death_report_pkey</UnderlyingIndexName>
     </key>
-    <foreign-key id="99" parent="67" name="death_report_date_id_fkey">
-      <ObjectId>33639</ObjectId>
-      <StateNumber>9857</StateNumber>
+    <foreign-key id="103" parent="67" name="death_report_date_id_fkey">
+      <ObjectId>34166</ObjectId>
+      <StateNumber>10191</StateNumber>
       <ColNames>date_id</ColNames>
-      <RefTableId>33574</RefTableId>
+      <RefTableId>34101</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>date</RefTableName>
       <RefKeyName>date_pkey</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="100" parent="67" name="death_report_country_id_fkey">
-      <ObjectId>33644</ObjectId>
-      <StateNumber>9857</StateNumber>
+    <foreign-key id="104" parent="67" name="death_report_country_id_fkey">
+      <ObjectId>34171</ObjectId>
+      <StateNumber>10191</StateNumber>
       <ColNames>country_id</ColNames>
-      <RefTableId>33592</RefTableId>
+      <RefTableId>34119</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>country</RefTableName>
       <RefKeyName>country_pkey</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="101" parent="67" name="death_report_reason_id_fkey">
-      <ObjectId>33649</ObjectId>
-      <StateNumber>9857</StateNumber>
+    <foreign-key id="105" parent="67" name="death_report_reason_id_fkey">
+      <ObjectId>34176</ObjectId>
+      <StateNumber>10191</StateNumber>
       <ColNames>reason_id</ColNames>
-      <RefTableId>33625</RefTableId>
+      <RefTableId>34152</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>death_reason</RefTableName>
       <RefKeyName>death_reason_pkey</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="102" parent="68" name="id">
+    <column id="106" parent="68" name="id">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>9855</StateNumber>
+      <StateNumber>10189</StateNumber>
       <DefaultExpression>nextval(&apos;adiscoursework.happiness_report_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>20</TypeId>
     </column>
-    <column id="103" parent="68" name="date_id">
+    <column id="107" parent="68" name="date_id">
       <Position>2</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>9855</StateNumber>
+      <StateNumber>10189</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <column id="104" parent="68" name="country_id">
+    <column id="108" parent="68" name="country_id">
       <Position>3</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>9855</StateNumber>
+      <StateNumber>10189</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <column id="105" parent="68" name="happiness_score">
+    <column id="109" parent="68" name="happiness_score">
       <Position>4</Position>
       <DataType>real|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>9855</StateNumber>
+      <StateNumber>10189</StateNumber>
       <TypeId>700</TypeId>
     </column>
-    <column id="106" parent="68" name="gdp">
+    <column id="110" parent="68" name="gdp">
       <Position>5</Position>
       <DataType>real|0s</DataType>
-      <StateNumber>9855</StateNumber>
+      <StateNumber>10189</StateNumber>
       <TypeId>700</TypeId>
     </column>
-    <column id="107" parent="68" name="social_support">
+    <column id="111" parent="68" name="social_support">
       <Position>6</Position>
       <DataType>real|0s</DataType>
-      <StateNumber>9855</StateNumber>
+      <StateNumber>10189</StateNumber>
       <TypeId>700</TypeId>
     </column>
-    <column id="108" parent="68" name="life_expectancy">
+    <column id="112" parent="68" name="life_expectancy">
       <Position>7</Position>
       <DataType>real|0s</DataType>
-      <StateNumber>9855</StateNumber>
+      <StateNumber>10189</StateNumber>
       <TypeId>700</TypeId>
     </column>
-    <column id="109" parent="68" name="freedom">
+    <column id="113" parent="68" name="freedom">
       <Position>8</Position>
       <DataType>real|0s</DataType>
-      <StateNumber>9855</StateNumber>
+      <StateNumber>10189</StateNumber>
       <TypeId>700</TypeId>
     </column>
-    <column id="110" parent="68" name="trust">
+    <column id="114" parent="68" name="trust">
       <Position>9</Position>
       <DataType>real|0s</DataType>
-      <StateNumber>9855</StateNumber>
+      <StateNumber>10189</StateNumber>
       <TypeId>700</TypeId>
     </column>
-    <column id="111" parent="68" name="generosity">
+    <column id="115" parent="68" name="generosity">
       <Position>10</Position>
       <DataType>real|0s</DataType>
-      <StateNumber>9855</StateNumber>
+      <StateNumber>10189</StateNumber>
       <TypeId>700</TypeId>
     </column>
-    <column id="112" parent="68" name="energy_consumption">
+    <column id="116" parent="68" name="energy_consumption">
       <Position>11</Position>
       <DataType>real|0s</DataType>
-      <StateNumber>9855</StateNumber>
+      <StateNumber>10189</StateNumber>
       <TypeId>700</TypeId>
     </column>
-    <column id="113" parent="68" name="total_deaths">
+    <column id="117" parent="68" name="total_deaths">
       <Position>12</Position>
       <DataType>integer|0s</DataType>
-      <StateNumber>9855</StateNumber>
+      <StateNumber>10189</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <index id="114" parent="68" name="happiness_report_pkey">
-      <ObjectId>33611</ObjectId>
-      <StateNumber>9855</StateNumber>
+    <index id="118" parent="68" name="happiness_report_pkey">
+      <ObjectId>34138</ObjectId>
+      <StateNumber>10189</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
@@ -1565,51 +1588,51 @@ sequence|table|33631|33633|1
       <ClassIds>3124</ClassIds>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="115" parent="68" name="happiness_report_pkey">
-      <ObjectId>33612</ObjectId>
-      <StateNumber>9855</StateNumber>
+    <key id="119" parent="68" name="happiness_report_pkey">
+      <ObjectId>34139</ObjectId>
+      <StateNumber>10189</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>happiness_report_pkey</UnderlyingIndexName>
     </key>
-    <foreign-key id="116" parent="68" name="happiness_report_date_id_fkey">
-      <ObjectId>33613</ObjectId>
-      <StateNumber>9855</StateNumber>
+    <foreign-key id="120" parent="68" name="happiness_report_date_id_fkey">
+      <ObjectId>34140</ObjectId>
+      <StateNumber>10189</StateNumber>
       <ColNames>date_id</ColNames>
-      <RefTableId>33574</RefTableId>
+      <RefTableId>34101</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>date</RefTableName>
       <RefKeyName>date_pkey</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="117" parent="68" name="happiness_report_country_id_fkey">
-      <ObjectId>33618</ObjectId>
-      <StateNumber>9855</StateNumber>
+    <foreign-key id="121" parent="68" name="happiness_report_country_id_fkey">
+      <ObjectId>34145</ObjectId>
+      <StateNumber>10189</StateNumber>
       <ColNames>country_id</ColNames>
-      <RefTableId>33592</RefTableId>
+      <RefTableId>34119</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>country</RefTableName>
       <RefKeyName>country_pkey</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="118" parent="69" name="id">
+    <column id="122" parent="69" name="id">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>9853</StateNumber>
+      <StateNumber>10187</StateNumber>
       <DefaultExpression>nextval(&apos;adiscoursework.region_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>20</TypeId>
     </column>
-    <column id="119" parent="69" name="name">
+    <column id="123" parent="69" name="name">
       <Position>2</Position>
       <DataType>varchar(100)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>9853</StateNumber>
+      <StateNumber>10187</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="120" parent="69" name="region_pkey">
-      <ObjectId>33586</ObjectId>
-      <StateNumber>9853</StateNumber>
+    <index id="124" parent="69" name="region_pkey">
+      <ObjectId>34113</ObjectId>
+      <StateNumber>10187</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
@@ -1617,9 +1640,9 @@ sequence|table|33631|33633|1
       <ClassIds>3124</ClassIds>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <index id="121" parent="69" name="region_name_key">
-      <ObjectId>33588</ObjectId>
-      <StateNumber>9853</StateNumber>
+    <index id="125" parent="69" name="region_name_key">
+      <ObjectId>34115</ObjectId>
+      <StateNumber>10187</StateNumber>
       <ColNames>name</ColNames>
       <Unique>1</Unique>
       <CollationIds>100</CollationIds>
@@ -1627,189 +1650,250 @@ sequence|table|33631|33633|1
       <ClassIds>3126</ClassIds>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="122" parent="69" name="region_pkey">
-      <ObjectId>33587</ObjectId>
-      <StateNumber>9853</StateNumber>
+    <key id="126" parent="69" name="region_pkey">
+      <ObjectId>34114</ObjectId>
+      <StateNumber>10187</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>region_pkey</UnderlyingIndexName>
     </key>
-    <key id="123" parent="69" name="region_name_key">
-      <ObjectId>33589</ObjectId>
-      <StateNumber>9853</StateNumber>
+    <key id="127" parent="69" name="region_name_key">
+      <ObjectId>34116</ObjectId>
+      <StateNumber>10187</StateNumber>
       <ColNames>name</ColNames>
       <UnderlyingIndexName>region_name_key</UnderlyingIndexName>
     </key>
-    <column id="124" parent="70" name="country_name">
+    <column id="128" parent="70" name="country_name">
       <Position>1</Position>
       <DataType>varchar(100)|0s</DataType>
-      <StateNumber>10016</StateNumber>
+      <StateNumber>10230</StateNumber>
     </column>
-    <column id="125" parent="70" name="year">
+    <column id="129" parent="70" name="year">
       <Position>2</Position>
       <DataType>integer|0s</DataType>
-      <StateNumber>10016</StateNumber>
+      <StateNumber>10230</StateNumber>
     </column>
-    <column id="126" parent="70" name="gdp">
+    <column id="130" parent="70" name="gdp">
       <Position>3</Position>
       <DataType>real|0s</DataType>
-      <StateNumber>10016</StateNumber>
+      <StateNumber>10230</StateNumber>
     </column>
-    <column id="127" parent="70" name="social_support">
+    <column id="131" parent="70" name="social_support">
       <Position>4</Position>
       <DataType>real|0s</DataType>
-      <StateNumber>10016</StateNumber>
+      <StateNumber>10230</StateNumber>
     </column>
-    <column id="128" parent="70" name="freedom">
+    <column id="132" parent="70" name="freedom">
       <Position>5</Position>
       <DataType>real|0s</DataType>
-      <StateNumber>10016</StateNumber>
+      <StateNumber>10230</StateNumber>
     </column>
-    <column id="129" parent="70" name="trust">
+    <column id="133" parent="70" name="trust">
       <Position>6</Position>
       <DataType>real|0s</DataType>
-      <StateNumber>10016</StateNumber>
+      <StateNumber>10230</StateNumber>
     </column>
-    <column id="130" parent="70" name="generosity">
+    <column id="134" parent="70" name="generosity">
       <Position>7</Position>
       <DataType>real|0s</DataType>
-      <StateNumber>10016</StateNumber>
+      <StateNumber>10230</StateNumber>
     </column>
-    <column id="131" parent="70" name="total_deaths">
+    <column id="135" parent="70" name="happiness_score">
       <Position>8</Position>
-      <DataType>integer|0s</DataType>
-      <StateNumber>10016</StateNumber>
-    </column>
-    <column id="132" parent="70" name="happiness_score">
-      <Position>9</Position>
       <DataType>real|0s</DataType>
-      <StateNumber>10016</StateNumber>
+      <StateNumber>10230</StateNumber>
     </column>
-    <column id="133" parent="71" name="Id">
+    <column id="136" parent="71" name="Id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>9912</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="134" parent="71" name="Year">
+    <column id="137" parent="71" name="Year">
       <Position>2</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>9912</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="135" parent="71" name="Country">
+    <column id="138" parent="71" name="Country">
       <Position>3</Position>
       <DataType>text|0s</DataType>
       <StateNumber>9912</StateNumber>
       <TypeId>25</TypeId>
     </column>
-    <column id="136" parent="71" name="Consumption">
+    <column id="139" parent="71" name="Consumption">
       <Position>4</Position>
       <DataType>numeric|0s</DataType>
       <StateNumber>9912</StateNumber>
       <TypeId>1700</TypeId>
     </column>
-    <column id="137" parent="72" name="Id">
+    <column id="140" parent="72" name="Id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>9876</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="138" parent="72" name="Country">
+    <column id="141" parent="72" name="Country">
       <Position>2</Position>
       <DataType>text|0s</DataType>
       <StateNumber>9876</StateNumber>
       <TypeId>25</TypeId>
     </column>
-    <column id="139" parent="72" name="Year">
+    <column id="142" parent="72" name="Year">
       <Position>3</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>9876</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="140" parent="72" name="reason">
+    <column id="143" parent="72" name="reason">
       <Position>4</Position>
       <DataType>text|0s</DataType>
       <StateNumber>9876</StateNumber>
       <TypeId>25</TypeId>
     </column>
-    <column id="141" parent="72" name="count">
+    <column id="144" parent="72" name="count">
       <Position>5</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>9876</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="142" parent="73" name="Happiness Rank">
+    <column id="145" parent="73" name="Happiness Rank">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>9864</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="143" parent="73" name="Id">
+    <column id="146" parent="73" name="Id">
       <Position>2</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>9864</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="144" parent="73" name="Country">
+    <column id="147" parent="73" name="Country">
       <Position>3</Position>
       <DataType>text|0s</DataType>
       <StateNumber>9864</StateNumber>
       <TypeId>25</TypeId>
     </column>
-    <column id="145" parent="73" name="Region">
+    <column id="148" parent="73" name="Region">
       <Position>4</Position>
       <DataType>text|0s</DataType>
       <StateNumber>9864</StateNumber>
       <TypeId>25</TypeId>
     </column>
-    <column id="146" parent="73" name="Happiness Score">
+    <column id="149" parent="73" name="Happiness Score">
       <Position>5</Position>
       <DataType>numeric|0s</DataType>
       <StateNumber>9864</StateNumber>
       <TypeId>1700</TypeId>
     </column>
-    <column id="147" parent="73" name="Economy (GDP per Capita)">
+    <column id="150" parent="73" name="Economy (GDP per Capita)">
       <Position>6</Position>
       <DataType>numeric|0s</DataType>
       <StateNumber>9864</StateNumber>
       <TypeId>1700</TypeId>
     </column>
-    <column id="148" parent="73" name="Family (Social Support)">
+    <column id="151" parent="73" name="Family (Social Support)">
       <Position>7</Position>
       <DataType>numeric|0s</DataType>
       <StateNumber>9864</StateNumber>
       <TypeId>1700</TypeId>
     </column>
-    <column id="149" parent="73" name="Health (Life Expectancy)">
+    <column id="152" parent="73" name="Health (Life Expectancy)">
       <Position>8</Position>
       <DataType>numeric|0s</DataType>
       <StateNumber>9864</StateNumber>
       <TypeId>1700</TypeId>
     </column>
-    <column id="150" parent="73" name="Freedom">
+    <column id="153" parent="73" name="Freedom">
       <Position>9</Position>
       <DataType>numeric|0s</DataType>
       <StateNumber>9864</StateNumber>
       <TypeId>1700</TypeId>
     </column>
-    <column id="151" parent="73" name="Trust (Government Corruption)">
+    <column id="154" parent="73" name="Trust (Government Corruption)">
       <Position>10</Position>
       <DataType>numeric|0s</DataType>
       <StateNumber>9864</StateNumber>
       <TypeId>1700</TypeId>
     </column>
-    <column id="152" parent="73" name="Generosity">
+    <column id="155" parent="73" name="Generosity">
       <Position>11</Position>
       <DataType>numeric|0s</DataType>
       <StateNumber>9864</StateNumber>
       <TypeId>1700</TypeId>
     </column>
-    <column id="153" parent="73" name="Year">
+    <column id="156" parent="73" name="Year">
       <Position>12</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>9864</StateNumber>
       <TypeId>23</TypeId>
+    </column>
+    <column id="157" parent="74" name="Country">
+      <Position>1</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>10025</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="158" parent="74" name="Population">
+      <Position>2</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>10025</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="159" parent="74" name="Yearly Change">
+      <Position>3</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>10025</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="160" parent="74" name="Net Change">
+      <Position>4</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>10025</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="161" parent="74" name="Density (P/Km²)">
+      <Position>5</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>10025</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="162" parent="74" name="Land Area (Km²)">
+      <Position>6</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>10025</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="163" parent="74" name="Migrants (net)">
+      <Position>7</Position>
+      <DataType>numeric|0s</DataType>
+      <StateNumber>10025</StateNumber>
+      <TypeId>1700</TypeId>
+    </column>
+    <column id="164" parent="74" name="Fert. Rate">
+      <Position>8</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>10025</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="165" parent="74" name="Med. Age">
+      <Position>9</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>10025</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="166" parent="74" name="Urban Pop %">
+      <Position>10</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>10025</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="167" parent="74" name="World Share">
+      <Position>11</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>10025</StateNumber>
+      <TypeId>25</TypeId>
     </column>
   </database-model>
 </dataSource>

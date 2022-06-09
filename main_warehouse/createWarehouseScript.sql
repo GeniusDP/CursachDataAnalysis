@@ -15,6 +15,9 @@ CREATE TABLE IF NOT EXISTS ADISCoursework.country(
     name varchar(100) UNIQUE NOT NULL,
     iso varchar(10),
     region_id bigint,
+    area int,
+    average_population bigint,
+    net_population_change bigint,
     FOREIGN KEY (region_id) REFERENCES ADISCoursework.region(id)
 );
 
@@ -51,3 +54,4 @@ CREATE TABLE IF NOT EXISTS ADISCoursework.death_report(
     FOREIGN KEY (country_id) REFERENCES ADISCoursework.country(id),
     FOREIGN KEY (reason_id) REFERENCES ADISCoursework.death_reason(id)
 );
+
