@@ -18,6 +18,7 @@ CREATE TABLE IF NOT EXISTS ADISCoursework.country(
     area int,
     average_population bigint,
     net_population_change bigint,
+    category text,
     FOREIGN KEY (region_id) REFERENCES ADISCoursework.region(id)
 );
 

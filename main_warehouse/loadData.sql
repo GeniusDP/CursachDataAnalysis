@@ -9,12 +9,14 @@ WITH countries AS (
     SELECT "Country" AS name FROM stagecoursework.death_reasons
     UNION
     SELECT "Country" AS name FROM stagecoursework.population_by_country)
-INSERT INTO adiscoursework.country (name, area, average_population, net_population_change)
+INSERT INTO adiscoursework.country (name, area, average_population, net_population_change, category)
 SELECT DISTINCT
                 (name),
                 (select "Land Area (Km²)" AS area from stagecoursework.population_by_country where name = "Country"),
                 (select "Population" from stagecoursework.population_by_country where name = "Country"),
-                (select "Net Change" from stagecoursework.population_by_country where name = "Country")
+                (select "Net Change" from stagecoursework.population_by_country where name = "Country"),
+                (select "Country Classification" from stagecoursework.country_indicators where name = "Country" and
+                                                                                               "Year" = 2016)
 FROM countries;
 
 WITH years AS (
