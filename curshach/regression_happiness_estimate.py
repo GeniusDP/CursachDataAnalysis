@@ -46,6 +46,10 @@ def main_work(df):
     printProjection(df, reg, 'social_support', 1000)
     printProjection(df, reg, 'freedom', 1000)
     printProjection(df, reg, 'generosity', 1000)
+    printProjection(df, reg, 'Malaria', 1000)
+    printProjection(df, reg, 'Neoplasms', 1000)
+    printProjection(df, reg, 'Drug use disorders', 1000)
+    printProjection(df, reg, 'HIV/AIDS', 1000)
     pass
 
 
@@ -57,7 +61,7 @@ def printProjection(df, regression, argument_name, detalization):
     step = max_value / detalization
     arg_value = 0
     while arg_value <= max_value:
-        tmp = [0, 0, 0, 0, 0]
+        tmp = [0, 0, 0, 0, 0, 0, 0, 0, 0]
         tmp[argument_position] = arg_value
         xReg.append(tmp)
         arg_value += step
@@ -76,7 +80,7 @@ def printProjection(df, regression, argument_name, detalization):
 
 
 # program
-df = pd.read_csv('../data/main_view.csv', sep=',', decimal='.')
+df = pd.read_csv('../data/the_most_main_view.csv', sep=',', decimal='.')
 
 print(df.info())
 

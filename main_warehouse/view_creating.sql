@@ -1,4 +1,6 @@
-DROP VIEW IF EXISTS ADISCOURSEWORK.MAIN_VIEW;
+DROP VIEW IF EXISTS ADISCOURSEWORK.MAIN_VIEW cascade;
+drop view if exists ADISCOURSEWORK.the_most_main_view cascade;
+drop view if exists adiscoursework.deaths_reasons_influence_on_happiness cascade;
 
 CREATE VIEW ADISCOURSEWORK.MAIN_VIEW AS
 SELECT
@@ -31,7 +33,7 @@ WHERE YEAR BETWEEN 2015 AND 2019;
 --убрали исходя из данных corr() illnesses.py
 ----убрали исходя из обоюдной корреляции
 --******************************************************************************************************
-drop view if exists adiscoursework.deaths_reasons_influence_on_happiness;
+
 create view adiscoursework.deaths_reasons_influence_on_happiness as
 SELECT name,
        year,
@@ -67,7 +69,7 @@ inner join adiscoursework.country on adiscoursework.death_report.country_id = ad
 inner join ADISCOURSEWORK.date on adiscoursework.death_report.date_id = adiscoursework.date.id;
 
 
-drop view if exists ADISCOURSEWORK.the_most_main_view;
+
 create view ADISCOURSEWORK.the_most_main_view as
     select
        name as country_name,
@@ -80,10 +82,9 @@ create view ADISCOURSEWORK.the_most_main_view as
        "Malaria",
        "Neoplasms",
        "Drug use disorders",
-       "Diarrheal diseases",
-       "Tuberculosis",
+       --"Diarrheal diseases",
        "HIV/AIDS",
-       "Acute hepatitis",
+       --"Acute hepatitis",
        main_view.happiness_score as happiness_score
 from adiscoursework.deaths_reasons_influence_on_happiness
 inner join ADISCOURSEWORK.MAIN_VIEW on
