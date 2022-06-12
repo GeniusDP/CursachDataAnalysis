@@ -17,12 +17,7 @@ SELECT
 FROM ADISCOURSEWORK.HAPPINESS_REPORT
 INNER JOIN ADISCOURSEWORK.DATE D ON D.ID = ADISCOURSEWORK.HAPPINESS_REPORT.DATE_ID
 INNER JOIN ADISCOURSEWORK.COUNTRY C ON C.ID = ADISCOURSEWORK.HAPPINESS_REPORT.COUNTRY_ID
-WHERE (ENERGY_CONSUMPTION IS NOT NULL)
-  AND (YEAR >= 2015 )
-  AND (YEAR <= 2019)
-  AND (TOTAL_DEATHS IS NOT NULL)
-  AND (AREA IS NOT NULL);
-
+WHERE YEAR BETWEEN 2015 AND 2019;
 /*
     1)дропнули life_expectancy - большая corr с gdp.
     2)дропнули energy_consumption_per_capita - большая corr с gdp
@@ -32,35 +27,66 @@ WHERE (ENERGY_CONSUMPTION IS NOT NULL)
 
 
 
+
+--убрали исходя из данных corr() illnesses.py
+----убрали исходя из обоюдной корреляции
 --******************************************************************************************************
-create view deaths_reasons_influence_on_happiness as
-SELECT (SELECT name FROM adiscoursework.country WHERE country_id = adiscoursework.country.id) AS country_name,
-       (SELECT year FROM adiscoursework.date WHERE date_id = adiscoursework.date.id) AS year,
-       "Self-harm"                               ,
-    "Interpersonal violence"                     ,
-    "Drowning"                                   ,
-    "Malaria"                                    ,
-    "Fire, heat, and hot substances"             ,
-    "Neoplasms"                                  ,
-    "Digestive diseases"                         ,
-    "Cirrhosis and other chronic liver diseases" ,
-    "Chronic respiratory diseases"               ,
-    "Chronic kidney disease"                     ,
-    "Cardiovascular diseases"                    ,
-    "Drug use disorders"                         ,
-    "Nutritional deficiencies"                   ,
-    "Alcohol use disorders"                      ,
-    "Lower respiratory infections"               ,
-    "Diabetes mellitus"                          ,
-    "Protein-energy malnutrition"                ,
-    "Exposure to forces of nature"               ,
-    "Environmental heat and cold exposure"       ,
-    "Diarrheal diseases"                         ,
-    "Road injuries"                              ,
-    "Tuberculosis"                               ,
-    "HIV/AIDS"                                   ,
-    "Alzheimer's disease and other dementias"    ,
-    "Parkinson's disease"                        ,
-    "Acute hepatitis"                            ,
+drop view if exists adiscoursework.deaths_reasons_influence_on_happiness;
+create view adiscoursework.deaths_reasons_influence_on_happiness as
+SELECT name,
+       year,
+--      "Self-harm"/(AVERAGE_POPULATION::REAL - (2020-YEAR) * NET_POPULATION_CHANGE)*10000 as "Self-harm",
+--     "Interpersonal violence"/(AVERAGE_POPULATION::REAL - (2020-YEAR) * NET_POPULATION_CHANGE)*10000 as "Interpersonal violence",
+--     "Drowning"/(AVERAGE_POPULATION::REAL - (2020-YEAR) * NET_POPULATION_CHANGE)*10000  "Drowning"                                 ,
+     "Malaria"/(AVERAGE_POPULATION::REAL - (2020-YEAR) * NET_POPULATION_CHANGE)*10000    "Malaria"                                ,
+--     "Fire, heat, and hot substances"/(AVERAGE_POPULATION::REAL - (2020-YEAR) * NET_POPULATION_CHANGE)*10000 "Fire, heat, and hot substances"            ,
+     "Neoplasms"/(AVERAGE_POPULATION::REAL - (2020-YEAR) * NET_POPULATION_CHANGE)*10000  "Neoplasms"                                ,
+--     "Digestive diseases"/(AVERAGE_POPULATION::REAL - (2020-YEAR) * NET_POPULATION_CHANGE)*10000 "Digestive diseases"                        ,
+--     "Cirrhosis and other chronic liver diseases"/(AVERAGE_POPULATION::REAL - (2020-YEAR) * NET_POPULATION_CHANGE)*10000 "Cirrhosis and other chronic liver diseases",
+--     "Chronic respiratory diseases"/(AVERAGE_POPULATION::REAL - (2020-YEAR) * NET_POPULATION_CHANGE)*10000 "Chronic respiratory diseases"              ,
+--     "Chronic kidney disease"/(AVERAGE_POPULATION::REAL - (2020-YEAR) * NET_POPULATION_CHANGE)*10000  "Chronic kidney disease"                   ,
+--     "Cardiovascular diseases"/(AVERAGE_POPULATION::REAL - (2020-YEAR) * NET_POPULATION_CHANGE)*10000 "Cardiovascular diseases"                   ,
+     "Drug use disorders"/(AVERAGE_POPULATION::REAL - (2020-YEAR) * NET_POPULATION_CHANGE)*10000  "Drug use disorders"                       ,
+--     "Nutritional deficiencies"/(AVERAGE_POPULATION::REAL - (2020-YEAR) * NET_POPULATION_CHANGE)*10000 "Nutritional deficiencies"                  ,
+--     "Alcohol use disorders"/(AVERAGE_POPULATION::REAL - (2020-YEAR) * NET_POPULATION_CHANGE)*10000  "Alcohol use disorders"                    ,
+--     "Lower respiratory infections"/(AVERAGE_POPULATION::REAL - (2020-YEAR) * NET_POPULATION_CHANGE)*10000  "Lower respiratory infections"             ,
+--     "Diabetes mellitus"/(AVERAGE_POPULATION::REAL - (2020-YEAR) * NET_POPULATION_CHANGE)*10000    "Diabetes mellitus"                      ,
+--     "Protein-energy malnutrition"/(AVERAGE_POPULATION::REAL - (2020-YEAR) * NET_POPULATION_CHANGE)*10000   "Protein-energy malnutrition"             ,
+--     "Exposure to forces of nature"/(AVERAGE_POPULATION::REAL - (2020-YEAR) * NET_POPULATION_CHANGE)*10000   "Exposure to forces of nature"            ,
+--     "Environmental heat and cold exposure"/(AVERAGE_POPULATION::REAL - (2020-YEAR) * NET_POPULATION_CHANGE)*10000 "Environmental heat and cold exposure"      ,
+     "Diarrheal diseases"/(AVERAGE_POPULATION::REAL - (2020-YEAR) * NET_POPULATION_CHANGE)*10000  "Diarrheal diseases"                       ,
+--     "Road injuries"/(AVERAGE_POPULATION::REAL - (2020-YEAR) * NET_POPULATION_CHANGE)*10000  "Road injuries"                            ,
+----     "Tuberculosis"/(AVERAGE_POPULATION::REAL - (2020-YEAR) * NET_POPULATION_CHANGE)*10000 "Tuberculosis"                              ,
+     "HIV/AIDS"/(AVERAGE_POPULATION::REAL - (2020-YEAR) * NET_POPULATION_CHANGE)*10000 "HIV/AIDS"                                  ,
+----     "Alzheimer's disease and other dementias"/(AVERAGE_POPULATION::REAL - (2020-YEAR) * NET_POPULATION_CHANGE)*10000 "Alzheimer's disease and other dementias"   ,
+----     "Parkinson's disease"/(AVERAGE_POPULATION::REAL - (2020-YEAR) * NET_POPULATION_CHANGE)*10000 "Parkinson's disease"                       ,
+     "Acute hepatitis"/(AVERAGE_POPULATION::REAL - (2020-YEAR) * NET_POPULATION_CHANGE)*10000 "Acute hepatitis"                           ,
     happiness_score
 FROM adiscoursework.death_report
+inner join adiscoursework.country on adiscoursework.death_report.country_id = adiscoursework.country.id
+inner join ADISCOURSEWORK.date on adiscoursework.death_report.date_id = adiscoursework.date.id;
+
+
+drop view if exists ADISCOURSEWORK.the_most_main_view;
+create view ADISCOURSEWORK.the_most_main_view as
+    select
+       name as country_name,
+       main_view.year as year,
+       social_support,
+       gdp,
+       freedom,
+       trust,
+       generosity,
+       "Malaria",
+       "Neoplasms",
+       "Drug use disorders",
+       "Diarrheal diseases",
+       "Tuberculosis",
+       "HIV/AIDS",
+       "Acute hepatitis",
+       main_view.happiness_score as happiness_score
+from adiscoursework.deaths_reasons_influence_on_happiness
+inner join ADISCOURSEWORK.MAIN_VIEW on
+    (ADISCOURSEWORK.MAIN_VIEW.COUNTRY_NAME = adiscoursework.deaths_reasons_influence_on_happiness.name)
+AND
+    (ADISCOURSEWORK.MAIN_VIEW.YEAR = adiscoursework.deaths_reasons_influence_on_happiness.year);
