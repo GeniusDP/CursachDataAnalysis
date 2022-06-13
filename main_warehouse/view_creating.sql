@@ -91,3 +91,23 @@ inner join ADISCOURSEWORK.MAIN_VIEW on
     (ADISCOURSEWORK.MAIN_VIEW.COUNTRY_NAME = adiscoursework.deaths_reasons_influence_on_happiness.name)
 AND
     (ADISCOURSEWORK.MAIN_VIEW.YEAR = adiscoursework.deaths_reasons_influence_on_happiness.year);
+
+create view adiscoursework.country_classification as
+select
+       country_name,
+       year,
+       social_support,
+       gdp,
+       freedom,
+       trust,
+       generosity,
+       "Malaria",
+       "Neoplasms",
+       "Drug use disorders",
+       "HIV/AIDS",
+       happiness_score,
+       category
+from
+    ADISCOURSEWORK.the_most_main_view
+    inner join adiscoursework.country on (adiscoursework.country.name = adiscoursework.the_most_main_view.country_name)
+    where year = 2016;
