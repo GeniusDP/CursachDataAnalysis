@@ -3,6 +3,7 @@ import pandas as pd
 from matplotlib import pyplot as plt
 from matplotlib.pyplot import show
 from scipy import stats
+import seaborn as sb
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import r2_score
 from sklearn.model_selection import train_test_split
@@ -43,11 +44,11 @@ def main_work(df):
 
     printProjection(df, reg, 'gdp', 1000)
     printProjection(df, reg, 'trust', 1000)
-    printProjection(df, reg, 'social_support', 1000)
+    #printProjection(df, reg, 'social_support', 1000)
     printProjection(df, reg, 'freedom', 1000)
     printProjection(df, reg, 'generosity', 1000)
     printProjection(df, reg, 'Malaria', 1000)
-    printProjection(df, reg, 'Neoplasms', 1000)
+    #printProjection(df, reg, 'Neoplasms', 1000)
     printProjection(df, reg, 'Drug use disorders', 1000)
     printProjection(df, reg, 'HIV/AIDS', 1000)
     pass
@@ -61,7 +62,7 @@ def printProjection(df, regression, argument_name, detalization):
     step = max_value / detalization
     arg_value = 0
     while arg_value <= max_value:
-        tmp = [0, 0, 0, 0, 0, 0, 0, 0, 0]
+        tmp = [0, 0, 0, 0, 0, 0, 0]
         tmp[argument_position] = arg_value
         xReg.append(tmp)
         arg_value += step
@@ -84,8 +85,11 @@ df = pd.read_csv('../data/the_most_main_view.csv', sep=',', decimal='.')
 
 print(df.info())
 
-df.drop(columns=['country_name', 'year'], inplace=True)
+df.drop(columns=['country_name', 'year', 'Neoplasms', 'social_support'], inplace=True)
 
-print(df.corr())
+corr = df.corr()
+print(corr)
 
+sb.heatmap(corr, xticklabels=corr.columns, yticklabels=corr.columns, annot=True, cmap=sb.color_palette("coolwarm", as_cmap=True))
+plt.show()
 main_work(df)
