@@ -123,8 +123,6 @@ def adaBoosting(X_train, Y_train, X_test, Y_test):
     pass
 
 
-
-
 def classification_function():
     # read data
     df = pd.read_csv('../data/country_classification.csv', sep=',', decimal='.')
@@ -138,7 +136,8 @@ def classification_function():
 
     X_data = df.drop(columns=['category'], inplace=False)
     label_encoder = LabelEncoder()
-    Y_data = label_encoder.fit_transform(df['category'])  # transforms 'Least Developed Country' into 2, etc...(ASC alphabetic order)
+    Y_data = label_encoder.fit_transform(
+        df['category'])  # transforms 'Least Developed Country' into 2, etc...(ASC alphabetic order)
     X_train, X_test, Y_train, Y_test = train_test_split(X_data.values, Y_data, test_size=0.3, random_state=5)
 
     # classification algorithm

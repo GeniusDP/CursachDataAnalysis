@@ -45,6 +45,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\main_warehouse\country_indicators.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\main_warehouse\death_reasons.csv">
           <value>
             <Attribute>
@@ -66,7 +73,21 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\stage_zone\above-age-70.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\stage_zone\age-between-15-and-49.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\stage_zone\age-between-50-and-69.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />

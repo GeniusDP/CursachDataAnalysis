@@ -75,13 +75,13 @@ create view ADISCOURSEWORK.the_most_main_view as
     select
        name as country_name,
        main_view.year as year,
-       social_support,
+       --social_support,
        gdp,
        freedom,
        trust,
        generosity,
-       "Malaria",
-       "Neoplasms",
+       --"Malaria", --14.06
+       --"Neoplasms", --14.06
        "Drug use disorders",
        --"Diarrheal diseases",
        "HIV/AIDS",
@@ -92,7 +92,8 @@ from adiscoursework.deaths_reasons_influence_on_happiness
 inner join ADISCOURSEWORK.MAIN_VIEW on
     (ADISCOURSEWORK.MAIN_VIEW.COUNTRY_NAME = adiscoursework.deaths_reasons_influence_on_happiness.name)
 AND
-    (ADISCOURSEWORK.MAIN_VIEW.YEAR = adiscoursework.deaths_reasons_influence_on_happiness.year);
+    (ADISCOURSEWORK.MAIN_VIEW.YEAR = adiscoursework.deaths_reasons_influence_on_happiness.year)
+WHERE "HIV/AIDS" <= 40 AND "Drug use disorders" <= 1.4;
 
 create view adiscoursework.country_classification as
 select

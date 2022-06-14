@@ -1,9 +1,7 @@
 import numpy as np
 import pandas as pd
-from matplotlib import pyplot as plt
-from matplotlib.pyplot import show
-from scipy import stats
 import seaborn as sb
+from matplotlib import pyplot as plt
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import r2_score
 from sklearn.model_selection import train_test_split
@@ -41,28 +39,28 @@ def main_work(df):
 
     coef, w0, R2, reg = regression(x, y, 1)
     print('degree 1: ', R2)
-
-    printProjection(df, reg, 'gdp', 1000)
-    printProjection(df, reg, 'trust', 1000)
-    printProjection(df, reg, 'social_support', 1000)
-    printProjection(df, reg, 'freedom', 1000)
-    printProjection(df, reg, 'generosity', 1000)
-    printProjection(df, reg, 'Malaria', 1000)
-    printProjection(df, reg, 'Neoplasms', 1000)
-    printProjection(df, reg, 'Drug use disorders', 1000)
-    printProjection(df, reg, 'HIV/AIDS', 1000)
+    plt.subplots(2, 3, sharex='all', sharey='all')
+    for col in df.columns:
+        if col != 'happiness_score':
+            printProjection(df, reg, col, 1000)
+    plt.show()
     pass
 
 
 def printProjection(df, regression, argument_name, detalization):
-    xReg = []
+    def fillZeros(list_length):
+        list = []
+        for i in range(list_length):
+            list.append(0)
+        return list
 
+    xReg = []
     argument_position = df.columns.tolist().index(argument_name)
     max_value = df[argument_name].max()
     step = max_value / detalization
     arg_value = 0
     while arg_value <= max_value:
-        tmp = [0, 0, 0, 0, 0, 0, 0, 0, 0]
+        tmp = fillZeros(df.columns.size - 1)
         tmp[argument_position] = arg_value
         xReg.append(tmp)
         arg_value += step
@@ -75,8 +73,6 @@ def printProjection(df, regression, argument_name, detalization):
 
     plt.plot(np.linspace(0, max_value, len(xReg)).reshape(-1, 1), regression.predict(xReg), color='red')
     plt.scatter(df[argument_name].to_numpy(), df['happiness_score'])
-
-    plt.show()
     pass
 
 
@@ -85,11 +81,11 @@ df = pd.read_csv('../data/the_most_main_view.csv', sep=',', decimal='.')
 
 print(df.info())
 
-df.drop(columns=['country_name', 'year'], inplace=True) # delete or not? , 'Neoplasms', 'social_support'
+df.drop(columns=['country_name', 'year', 'category', 'Malaria'], inplace=True) # delete or not? , 'Neoplasms', 'social_support', 'Malaria'
 
 corr = df.corr()
-print(corr)
 
 sb.heatmap(corr, xticklabels=corr.columns, yticklabels=corr.columns, annot=True, cmap=sb.color_palette("coolwarm", as_cmap=True))
+plt.savefig('../data/images/happiness_corr.png')
 plt.show()
 main_work(df)
