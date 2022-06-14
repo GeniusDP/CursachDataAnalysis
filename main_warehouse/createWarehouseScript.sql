@@ -18,7 +18,6 @@ CREATE TABLE IF NOT EXISTS ADISCoursework.country(
     area int,
     average_population bigint,
     net_population_change bigint,
-    category text,
     FOREIGN KEY (region_id) REFERENCES ADISCoursework.region(id)
 );
 
@@ -35,6 +34,7 @@ CREATE TABLE IF NOT EXISTS ADISCoursework.happiness_report(
     generosity float4,
     energy_consumption float4,
     total_deaths int,
+    category text,
     FOREIGN KEY (date_id) REFERENCES ADISCoursework.date(id),
     FOREIGN KEY (country_id) REFERENCES ADISCoursework.country(id)
 );

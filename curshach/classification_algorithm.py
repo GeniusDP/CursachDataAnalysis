@@ -29,7 +29,7 @@ def classification_function():
 
         thresh = cm.max() / 2.
         for i, j in itertools.product(range(cm.shape[0]), range(cm.shape[1])):
-            plt.text(j, i, cm[i, j],
+            plt.text(j, i, format(cm[i, j], '.2f'),
                      horizontalalignment="center",
                      color="white" if cm[i, j] > thresh else "black")
 
@@ -47,7 +47,7 @@ def classification_function():
         print('R^2 score for decision tree= ', dtree_model.score(X_test, Y_test))
 
         # confusion matrix
-        cm = confusion_matrix(Y_test, dtree_predictions)
+        cm = confusion_matrix(Y_test, dtree_predictions, normalize = 'all')
         plot_confusion_matrix(cm, ['Developed Country', 'Developing Country', 'Least Developed Country'],
                               title='Confusion matrix for DecisionTreeClassifier')
         pass
@@ -60,7 +60,7 @@ def classification_function():
         print('R^2 score for random forest: ', random_forest.score(X_test, Y_test))
 
         # confusion matrix
-        cm = confusion_matrix(Y_test, random_forest_prediction)
+        cm = confusion_matrix(Y_test, random_forest_prediction, normalize = 'all')
         plot_confusion_matrix(cm, ['Developed Country', 'Developing Country', 'Least Developed Country'],
                               title='Confusion matrix for RandomForestClassifier')
         pass
@@ -73,7 +73,7 @@ def classification_function():
         print('R^2 score for logistic regression: ', soft_max.score(X_test, Y_test))
 
         # confusion matrix
-        cm = confusion_matrix(Y_test, soft_max_predict)
+        cm = confusion_matrix(Y_test, soft_max_predict, normalize = 'all')
         plot_confusion_matrix(cm, ['Developed Country', 'Developing Country', 'Least Developed Country'],
                               title='Confusion matrix for LogisticRegressionSoftMax')
         pass
@@ -81,13 +81,12 @@ def classification_function():
     # read data
     df = pd.read_csv('../data/country_classification.csv', sep=',', decimal='.')
     print(df.info())
-    df.drop(columns=['country_name', 'year', 'happiness_score', 'social_support', 'Neoplasms'],
-            inplace=True)  # delete or not? , 'Neoplasms', 'social_support'
+    df.drop(columns=['country_name', 'year'], inplace=True)
+
     # correlation
     corr = df.corr().round(2)
     seaborn.heatmap(corr, annot=True)
     plt.show()
-    print(corr)
 
     X_data = df.drop(columns=['category'], inplace=False)
     label_encoder = LabelEncoder()

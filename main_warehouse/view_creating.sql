@@ -15,7 +15,8 @@ SELECT
        --(TOTAL_DEATHS::REAL)/(AVERAGE_POPULATION::REAL - (2020-YEAR) * C.NET_POPULATION_CHANGE) AS DEATHS_PER_CAPITA,
        --AREA,
        --(AVERAGE_POPULATION::REAL - (2020-YEAR) * C.NET_POPULATION_CHANGE) / AREA AS POPULATION_DENSITY,
-       HAPPINESS_SCORE
+       HAPPINESS_SCORE,
+       category
 FROM ADISCOURSEWORK.HAPPINESS_REPORT
 INNER JOIN ADISCOURSEWORK.DATE D ON D.ID = ADISCOURSEWORK.HAPPINESS_REPORT.DATE_ID
 INNER JOIN ADISCOURSEWORK.COUNTRY C ON C.ID = ADISCOURSEWORK.HAPPINESS_REPORT.COUNTRY_ID
@@ -85,7 +86,8 @@ create view ADISCOURSEWORK.the_most_main_view as
        --"Diarrheal diseases",
        "HIV/AIDS",
        --"Acute hepatitis",
-       main_view.happiness_score as happiness_score
+       main_view.happiness_score as happiness_score,
+       category
 from adiscoursework.deaths_reasons_influence_on_happiness
 inner join ADISCOURSEWORK.MAIN_VIEW on
     (ADISCOURSEWORK.MAIN_VIEW.COUNTRY_NAME = adiscoursework.deaths_reasons_influence_on_happiness.name)
@@ -94,20 +96,20 @@ AND
 
 create view adiscoursework.country_classification as
 select
+       --happiness_score,
+       --social_support,
+       --"Neoplasms",
        country_name,
        year,
-       social_support,
        gdp,
        freedom,
        trust,
        generosity,
        "Malaria",
-       "Neoplasms",
        "Drug use disorders",
        "HIV/AIDS",
-       happiness_score,
        category
 from
     ADISCOURSEWORK.the_most_main_view
     inner join adiscoursework.country on (adiscoursework.country.name = adiscoursework.the_most_main_view.country_name)
-    where year = 2016;
+    where category is not null;
