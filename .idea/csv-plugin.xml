@@ -10,21 +10,7 @@
             </Attribute>
           </value>
         </entry>
-        <entry key="\data\country_classification1.csv">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
         <entry key="\data\deaths_reasons_influence_on_happiness.csv">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
-        <entry key="\data\main_view.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
@@ -88,6 +74,13 @@
           </value>
         </entry>
         <entry key="\stage_zone\age-between-50-and-69.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\stage_zone\population_by_country.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />

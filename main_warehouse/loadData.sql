@@ -1,6 +1,3 @@
-INSERT INTO adiscoursework.region (name)
-SELECT DISTINCT("Region") FROM stagecoursework.happiness;
-
 WITH countries AS (
     SELECT "Country" AS name FROM stagecoursework.happiness
     UNION
