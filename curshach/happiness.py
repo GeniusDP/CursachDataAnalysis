@@ -32,6 +32,7 @@ convert_column_to_float(df, 'Health (Life Expectancy)')
 convert_column_to_float(df, 'Freedom')
 convert_column_to_float(df, 'Trust (Government Corruption)')
 convert_column_to_float(df, 'Generosity')
+df["Country"] = df["Country"].str.replace('*', '')
 
 build_hist(df, 'Happiness Score')
 build_hist(df, 'Economy (GDP per Capita)')
