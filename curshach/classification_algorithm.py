@@ -12,11 +12,14 @@ from sklearn.svm import SVC
 from sklearn.tree import DecisionTreeClassifier
 
 # configurations
+from statsmodels.compat.pandas import to_numpy
 
 pd.options.display.max_rows = 1000
 pd.options.display.max_columns = 1000
 pd.set_option('display.expand_frame_repr', False)
 
+classes = ['Least Developed Country', 'Developing Country', 'Developed Country']
+classes.sort()
 
 def plot_confusion_matrix(cm, classes, title='Confusion matrix', cmap=plt.cm.Blues):
     plt.imshow(cm, interpolation='nearest', cmap=cmap)
@@ -48,9 +51,8 @@ def decisionTreeClassification(X_train, Y_train, X_test, Y_test):
 
     # confusion matrix
     cm = confusion_matrix(Y_test, dtree_predictions, normalize='all')
-    plot_confusion_matrix(cm, ['Developed Country', 'Developing Country', 'Least Developed Country'],
-                          title='Confusion matrix for DecisionTreeClassifier')
-    pass
+    plot_confusion_matrix(cm, classes, title='Confusion matrix for DecisionTreeClassifier')
+    return dtree_model
 
 
 def randomForest(X_train, Y_train, X_test, Y_test):
@@ -62,9 +64,8 @@ def randomForest(X_train, Y_train, X_test, Y_test):
 
     # confusion matrix
     cm = confusion_matrix(Y_test, random_forest_prediction, normalize='all')
-    plot_confusion_matrix(cm, ['Developed Country', 'Developing Country', 'Least Developed Country'],
-                          title='Confusion matrix for RandomForestClassifier')
-    pass
+    plot_confusion_matrix(cm, classes, title='Confusion matrix for RandomForestClassifier')
+    return random_forest
 
 
 def logisticRegression(X_train, Y_train, X_test, Y_test):
@@ -76,9 +77,8 @@ def logisticRegression(X_train, Y_train, X_test, Y_test):
 
     # confusion matrix
     cm = confusion_matrix(Y_test, soft_max_predict, normalize='all')
-    plot_confusion_matrix(cm, ['Developed Country', 'Developing Country', 'Least Developed Country'],
-                          title='Confusion matrix for LogisticRegressionSoftMax')
-    pass
+    plot_confusion_matrix(cm, classes, title='Confusion matrix for LogisticRegressionSoftMax')
+    return soft_max
 
 
 def gradientBoosting(X_train, Y_train, X_test, Y_test):
@@ -90,9 +90,8 @@ def gradientBoosting(X_train, Y_train, X_test, Y_test):
 
     # confusion matrix
     cm = confusion_matrix(Y_test, gradientBoosting_predict, normalize='all')
-    plot_confusion_matrix(cm, ['Developed Country', 'Developing Country', 'Least Developed Country'],
-                          title='Confusion matrix for LogisticRegressionSoftMax')
-    pass
+    plot_confusion_matrix(cm, classes, title='Confusion matrix for LogisticRegressionSoftMax')
+    return gradient_boosting
 
 
 def baggingClassification(X_train, Y_train, X_test, Y_test):
@@ -104,9 +103,8 @@ def baggingClassification(X_train, Y_train, X_test, Y_test):
 
     # confusion matrix
     cm = confusion_matrix(Y_test, bagging_predict, normalize='all')
-    plot_confusion_matrix(cm, ['Developed Country', 'Developing Country', 'Least Developed Country'],
-                          title='Confusion matrix for LogisticRegressionSoftMax')
-    pass
+    plot_confusion_matrix(cm, classes, title='Confusion matrix for LogisticRegressionSoftMax')
+    return bagging
 
 
 def adaBoosting(X_train, Y_train, X_test, Y_test):
@@ -118,9 +116,8 @@ def adaBoosting(X_train, Y_train, X_test, Y_test):
 
     # confusion matrix
     cm = confusion_matrix(Y_test, ada_boosting_predict, normalize='all')
-    plot_confusion_matrix(cm, ['Developed Country', 'Developing Country', 'Least Developed Country'],
-                          title='Confusion matrix for LogisticRegressionSoftMax')
-    pass
+    plot_confusion_matrix(cm, classes, title='Confusion matrix for LogisticRegressionSoftMax')
+    return ada_boosting
 
 
 def classification_function():
@@ -135,18 +132,26 @@ def classification_function():
     plt.show()
 
     X_data = df.drop(columns=['category'], inplace=False)
+
+    # transforms 'Least Developed Country' into 2, etc...(ASC alphabetic order)
     label_encoder = LabelEncoder()
-    Y_data = label_encoder.fit_transform(
-        df['category'])  # transforms 'Least Developed Country' into 2, etc...(ASC alphabetic order)
+    Y_data = label_encoder.fit_transform(df['category'])
+
     X_train, X_test, Y_train, Y_test = train_test_split(X_data.values, Y_data, test_size=0.3, random_state=5)
 
-    # classification algorithm
-    decisionTreeClassification(X_train, Y_train, X_test, Y_test)
-    randomForest(X_train, Y_train, X_test, Y_test)
-    logisticRegression(X_train, Y_train, X_test, Y_test)
-    gradientBoosting(X_train, Y_train, X_test, Y_test)
-    baggingClassification(X_train, Y_train, X_test, Y_test)
-    adaBoosting(X_train, Y_train, X_test, Y_test)
+    #classification algorithm
+    # decisionTreeClassification(X_train, Y_train, X_test, Y_test)
+    # randomForest(X_train, Y_train, X_test, Y_test)
+    # logisticRegression(X_train, Y_train, X_test, Y_test)
+    # gradientBoosting(X_train, Y_train, X_test, Y_test)
+    # baggingClassification(X_train, Y_train, X_test, Y_test)
+    # adaBoosting(X_train, Y_train, X_test, Y_test)
+    getCountryClass(randomForest(X_train, Y_train, X_test, Y_test))
+    pass
+
+def getCountryClass(classificator):
+    test_x = [1.56391,0.61583,0.37798,0.28034,0,0.2949038873536539,0.05204186247417423]
+    print(classes[classificator.predict(np.array(test_x).reshape(1, -1))[0]])
     pass
 
 
