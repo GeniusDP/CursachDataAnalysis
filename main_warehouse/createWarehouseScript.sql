@@ -5,20 +5,12 @@ CREATE TABLE IF NOT EXISTS ADISCoursework.date(
     year int
 );
 
-CREATE TABLE IF NOT EXISTS ADISCoursework.region(
-    id bigserial PRIMARY KEY UNIQUE NOT NULL,
-    name varchar(100) UNIQUE NOT NULL
-);
-
 CREATE TABLE IF NOT EXISTS ADISCoursework.country(
     id bigserial PRIMARY KEY UNIQUE NOT NULL,
     name varchar(100) UNIQUE NOT NULL,
-    iso varchar(10),
-    region_id bigint,
     area int,
     average_population bigint,
-    net_population_change bigint,
-    FOREIGN KEY (region_id) REFERENCES ADISCoursework.region(id)
+    net_population_change bigint
 );
 
 CREATE TABLE IF NOT EXISTS ADISCoursework.happiness_report(
