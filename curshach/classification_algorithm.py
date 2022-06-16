@@ -150,7 +150,7 @@ def classification_function():
     pass
 
 def getCountryClass(classificator):
-    test_x = [1.56391,0.61583,0.37798,0.28034,0,0.2949038873536539,0.05204186247417423]
+    test_x = [1.56391, 0.61583, 0.37798, 0.28034, 0, 0.2949038873536539, 0.05204186247417423]
     print(classes[classificator.predict(np.array(test_x).reshape(1, -1))[0]])
     pass
 
