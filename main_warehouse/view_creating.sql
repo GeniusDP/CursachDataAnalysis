@@ -106,7 +106,7 @@ select
        freedom,
        trust,
        generosity,
-       "Malaria",
+       --"Malaria",
        "Drug use disorders",
        "HIV/AIDS",
        category
