@@ -51,36 +51,12 @@ SELECT (SELECT id FROM adiscoursework.date WHERE "Year" = year),
           AND stagecoursework.country_indicators."Country" = happiness."Country")
 FROM stagecoursework.happiness;
 
-INSERT INTO adiscoursework.death_report(country_id, date_id, "Self-harm", "Interpersonal violence", "Drowning", "Malaria", "Fire, heat, and hot substances", "Neoplasms", "Digestive diseases", "Cirrhosis and other chronic liver diseases", "Chronic respiratory diseases", "Chronic kidney disease", "Cardiovascular diseases", "Drug use disorders", "Nutritional deficiencies", "Alcohol use disorders", "Lower respiratory infections", "Diabetes mellitus", "Protein-energy malnutrition", "Exposure to forces of nature", "Environmental heat and cold exposure", "Diarrheal diseases", "Road injuries", "Tuberculosis", "HIV/AIDS", "Alzheimer's disease and other dementias", "Parkinson's disease", "Acute hepatitis", happiness_score)
+INSERT INTO adiscoursework.death_reason(name)
+SELECT DISTINCT("Reason") FROM stagecoursework.death_reasons;
+
+INSERT INTO adiscoursework.death_report(country_id, date_id, reason_id, count)
 SELECT (SELECT id FROM adiscoursework.country WHERE "Country" = name),
        (SELECT id FROM adiscoursework.date WHERE "Year" = year),
-       "Self-harm",
-       "Interpersonal violence",
-       "Drowning", "Malaria",
-       "Fire, heat, and hot substances",
-       "Neoplasms",
-       "Digestive diseases",
-       "Cirrhosis and other chronic liver diseases",
-       "Chronic respiratory diseases",
-       "Chronic kidney disease",
-       "Cardiovascular diseases",
-       "Drug use disorders",
-       "Nutritional deficiencies",
-       "Alcohol use disorders",
-       "Lower respiratory infections",
-       "Diabetes mellitus",
-       "Protein-energy malnutrition",
-       "Exposure to forces of nature",
-       "Environmental heat and cold exposure",
-       "Diarrheal diseases",
-       "Road injuries",
-       "Tuberculosis",
-       "HIV/AIDS",
-       "Alzheimer's disease and other dementias",
-       "Parkinson's disease",
-       "Acute hepatitis",
-       happiness_score
-FROM stagecoursework.death_reasons
-inner join adiscoursework.happiness_report
-    on "Year" = (SELECT year FROM adiscoursework.date WHERE date_id = adiscoursework.date.id) AND
-       "Country" = (SELECT name FROM adiscoursework.country WHERE country_id = adiscoursework.country.id);
+       (SELECT id FROM adiscoursework.death_reason WHERE "Reason" = name),
+       "Count"
+FROM stagecoursework.death_reasons;

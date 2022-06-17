@@ -39,7 +39,6 @@ def main_work(df):
 
     coef, w0, R2, reg = regression(x, y, 1)
     print('degree 1: ', R2)
-    plt.subplots(2, 3, sharex='all', sharey='all')
     for col in df.columns:
         if col != 'happiness_score':
             printProjection(df, reg, col, 1000)
@@ -81,7 +80,7 @@ df = pd.read_csv('../data/the_most_main_view.csv', sep=',', decimal='.')
 
 print(df.info())
 
-df.drop(columns=['country_name', 'year', 'category', 'Malaria'], inplace=True) # delete or not? , 'Neoplasms', 'social_support', 'Malaria'
+df.drop(columns=['country_name', 'year', 'category', 'Malaria', 'Unnamed: 0'], inplace=True) # delete or not? , 'Neoplasms', 'social_support', 'Malaria'
 
 corr = df.corr()
 

@@ -31,38 +31,19 @@ CREATE TABLE IF NOT EXISTS ADISCoursework.happiness_report(
     FOREIGN KEY (country_id) REFERENCES ADISCoursework.country(id)
 );
 
+CREATE TABLE IF NOT EXISTS ADISCoursework.death_reason(
+    id bigserial PRIMARY KEY UNIQUE NOT NULL,
+    name text NOT NULL
+);
+
 CREATE TABLE IF NOT EXISTS ADISCoursework.death_report(
-    id                                         bigserial PRIMARY KEY UNIQUE NOT NULL,
-    country_id                                   int NOT NULL,
-    date_id                                      int NOT NULL,
-    "Self-harm"                                  integer,
-    "Interpersonal violence"                     integer,
-    "Drowning"                                   integer,
-    "Malaria"                                    integer,
-    "Fire, heat, and hot substances"             integer,
-    "Neoplasms"                                  integer,
-    "Digestive diseases"                         integer,
-    "Cirrhosis and other chronic liver diseases" integer,
-    "Chronic respiratory diseases"               integer,
-    "Chronic kidney disease"                     integer,
-    "Cardiovascular diseases"                    integer,
-    "Drug use disorders"                         integer,
-    "Nutritional deficiencies"                   integer,
-    "Alcohol use disorders"                      integer,
-    "Lower respiratory infections"               integer,
-    "Diabetes mellitus"                          integer,
-    "Protein-energy malnutrition"                integer,
-    "Exposure to forces of nature"               integer,
-    "Environmental heat and cold exposure"       integer,
-    "Diarrheal diseases"                         integer,
-    "Road injuries"                              integer,
-    "Tuberculosis"                               integer,
-    "HIV/AIDS"                                   integer,
-    "Alzheimer's disease and other dementias"    integer,
-    "Parkinson's disease"                        integer,
-    "Acute hepatitis"                            integer,
-    happiness_score real NOT NULL,
+    id bigserial PRIMARY KEY UNIQUE NOT NULL,
+    country_id int NOT NULL,
+    date_id int NOT NULL,
+    reason_id int NOT NULL,
+    count int,
     FOREIGN KEY (country_id) REFERENCES ADISCoursework.country(id),
-    FOREIGN KEY (date_id) REFERENCES ADISCoursework.date(id)
+    FOREIGN KEY (date_id) REFERENCES ADISCoursework.date(id),
+    FOREIGN KEY (reason_id) REFERENCES ADISCoursework.death_reason(id)
 );
 
