@@ -44,14 +44,45 @@ SELECT (SELECT id FROM adiscoursework.date WHERE "Year" = year),
        "Freedom",
        "Trust (Government Corruption)",
        "Generosity",
-       (SELECT "Consumption" FROM stagecoursework.country_consumption WHERE country_consumption."Year" = happiness."Year" AND country_consumption."Country" = happiness."Country"),
+       (SELECT "Consumption" FROM stagecoursework.country_consumption
+       WHERE country_consumption."Year" = happiness."Year"
+         AND country_consumption."Country" = happiness."Country"),
        (SELECT "Country Classification"
         FROM stagecoursework.country_indicators
         WHERE stagecoursework.country_indicators."Year" = happiness."Year"
           AND stagecoursework.country_indicators."Country" = happiness."Country")
 FROM stagecoursework.happiness;
 
-INSERT INTO adiscoursework.death_report(country_id, date_id, "Self-harm", "Interpersonal violence", "Drowning", "Malaria", "Fire, heat, and hot substances", "Neoplasms", "Digestive diseases", "Cirrhosis and other chronic liver diseases", "Chronic respiratory diseases", "Chronic kidney disease", "Cardiovascular diseases", "Drug use disorders", "Nutritional deficiencies", "Alcohol use disorders", "Lower respiratory infections", "Diabetes mellitus", "Protein-energy malnutrition", "Exposure to forces of nature", "Environmental heat and cold exposure", "Diarrheal diseases", "Road injuries", "Tuberculosis", "HIV/AIDS", "Alzheimer's disease and other dementias", "Parkinson's disease", "Acute hepatitis", happiness_score)
+INSERT INTO adiscoursework.death_report(
+                                        country_id,
+                                        date_id,
+                                        "Self-harm",
+                                        "Interpersonal violence",
+                                        "Drowning",
+                                        "Malaria",
+                                        "Fire, heat, and hot substances",
+                                        "Neoplasms",
+                                        "Digestive diseases",
+                                        "Cirrhosis and other chronic liver diseases",
+                                        "Chronic respiratory diseases",
+                                        "Chronic kidney disease",
+                                        "Cardiovascular diseases",
+                                        "Drug use disorders",
+                                        "Nutritional deficiencies",
+                                        "Alcohol use disorders",
+                                        "Lower respiratory infections",
+                                        "Diabetes mellitus",
+                                        "Protein-energy malnutrition",
+                                        "Exposure to forces of nature",
+                                        "Environmental heat and cold exposure",
+                                        "Diarrheal diseases",
+                                        "Road injuries",
+                                        "Tuberculosis",
+                                        "HIV/AIDS",
+                                        "Alzheimer's disease and other dementias",
+                                        "Parkinson's disease",
+                                        "Acute hepatitis",
+                                        happiness_score)
 SELECT (SELECT id FROM adiscoursework.country WHERE "Country" = name),
        (SELECT id FROM adiscoursework.date WHERE "Year" = year),
        "Self-harm",
