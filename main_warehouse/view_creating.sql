@@ -42,4 +42,4 @@ create view adiscoursework.deaths_reasons_influence_on_happiness as
     inner join adiscoursework.country c on c.id = death_report.country_id
     inner join adiscoursework.date d on d.id = death_report.date_id
     inner join adiscoursework.death_reason dr on dr.id = death_report.reason_id
-    WHERE year BETWEEN 2015 AND 2019;
+    WHERE year BETWEEN 2015 AND 2019 AND count IS NOT NULL;

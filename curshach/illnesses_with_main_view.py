@@ -10,6 +10,7 @@ pd.set_option('display.expand_frame_repr', False)
 
 # program
 df = pd.read_csv('../data/deaths_reasons_influence_on_happiness.csv', sep=',', decimal='.')
+df.dropna(inplace=True)
 df = df.pivot(index=["country_name", "year"], columns="reason_name", values="count")
 print(df.info())
 

@@ -31,7 +31,7 @@ df3 = pd.read_csv('../stage_zone/above-age-70.csv', sep=',', decimal='.', encodi
 df = pd.concat([df1, df2, df3])
 df = df.groupby(['Country', 'Year']).sum()
 
-build_hists_for_columns_list(df, ['Self-harm', 'Interpersonal violence', 'Drowning', 'Malaria', "Fire, heat, and hot substances", 'Neoplasms', 'Digestive diseases','Cirrhosis and other chronic liver diseases','Chronic respiratory diseases','Chronic kidney disease','Cardiovascular diseases','Drug use disorders','Nutritional deficiencies','Alcohol use disorders','Lower respiratory infections','Diabetes mellitus','Protein-energy malnutrition','Exposure to forces of nature','Environmental heat and cold exposure','Diarrheal diseases','Road injuries','Tuberculosis','HIV/AIDS',"Alzheimer's disease and other dementias","Parkinson's disease","Acute hepatitis"])
+#build_hists_for_columns_list(df, ['Self-harm', 'Interpersonal violence', 'Drowning', 'Malaria', "Fire, heat, and hot substances", 'Neoplasms', 'Digestive diseases','Cirrhosis and other chronic liver diseases','Chronic respiratory diseases','Chronic kidney disease','Cardiovascular diseases','Drug use disorders','Nutritional deficiencies','Alcohol use disorders','Lower respiratory infections','Diabetes mellitus','Protein-energy malnutrition','Exposure to forces of nature','Environmental heat and cold exposure','Diarrheal diseases','Road injuries','Tuberculosis','HIV/AIDS',"Alzheimer's disease and other dementias","Parkinson's disease","Acute hepatitis"])
 
 df.to_csv('../main_warehouse/death_reasons.csv')
 df = pd.read_csv('../main_warehouse/death_reasons.csv', sep=',', decimal='.', encoding='cp1252')
