@@ -122,9 +122,14 @@ def adaBoosting(X_train, Y_train, X_test, Y_test):
 
 def classification_function():
     # read data
-    df = pd.read_csv('../data/country_classification.csv', sep=',', decimal='.')
-    print(df.info())
+    # df = pd.read_csv('../data/country_classification.csv', sep=',', decimal='.')
+    df = pd.read_csv('../data/the_most_main_view.csv', sep=',', decimal='.')
+    df = df.drop(columns=["Unnamed: 0", 'happiness_score'])
+    column = df.pop("category")
+    df.insert(9, "category", column)
+    df = df[ df['category'].isna() == False ]
     df.drop(columns=['country_name', 'year'], inplace=True)
+    print(df.info())
 
     # correlation
     corr = df.corr().round(2)

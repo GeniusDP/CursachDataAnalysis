@@ -35,4 +35,7 @@ build_hists_for_columns_list(df, ['Self-harm', 'Interpersonal violence', 'Drowni
 
 df.to_csv('../main_warehouse/death_reasons.csv')
 df = pd.read_csv('../main_warehouse/death_reasons.csv', sep=',', decimal='.', encoding='cp1252')
+df = df.melt(id_vars=["Country", "Year"],
+        var_name="Reason",
+        value_name="Count")
 df.to_csv('../main_warehouse/death_reasons.csv')
