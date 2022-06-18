@@ -1,6 +1,7 @@
 import itertools
 import numpy as np
 import pandas as pd
+import penguins as penguins
 import seaborn
 from matplotlib import pyplot as plt
 from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier, BaggingClassifier, AdaBoostClassifier
@@ -152,7 +153,10 @@ def classification_function():
     # baggingClassification(X_train, Y_train, X_test, Y_test)
     # adaBoosting(X_train, Y_train, X_test, Y_test)
     getCountryClass(randomForest(X_train, Y_train, X_test, Y_test))
-    seaborn.pairplot(df, hue='category', height=2.5, vars=['gdp', 'freedom', 'trust', 'generosity'])
+
+    # seaborn.pairplot(df, hue='category', height=2.5, vars=['gdp', 'freedom', 'trust', 'generosity'])
+    seaborn.pairplot(df, diag_kind="kde", hue='category', height=2.5, vars=['gdp', 'freedom', 'trust', 'generosity']).map_lower(seaborn.kdeplot, levels=1, color=".2")
+
     plt.savefig('../data/images/test.png')
     plt.show()
     pass
