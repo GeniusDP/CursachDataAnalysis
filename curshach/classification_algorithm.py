@@ -134,7 +134,7 @@ def classification_function():
 
     # correlation
     corr = df.corr().round(2)
-    seaborn.heatmap(corr, annot=True)
+    seaborn.heatmap(corr, xticklabels=corr.columns, yticklabels=corr.columns, annot=True, cmap=seaborn.color_palette("coolwarm", as_cmap=True))
     plt.show()
 
     X_data = df.drop(columns=['category'], inplace=False)
