@@ -54,7 +54,7 @@ def main_work(df):
         x.append(tmp)
     y = df['happiness_score'].to_numpy()
 
-    for i in range(3, 4):
+    for i in range(1, 4):
         coef, R2, reg, _RSE = regression(x, y, i)
         print('---------------------------------------')
         print(f'degree {i} R^2: ', R2)
@@ -102,18 +102,12 @@ def printProjection(df, regression, argument_name, detalization, axs):
 
 
 # program
-df = pd.read_csv('../data/main_view.csv', sep=',', decimal='.')
+df = pd.read_csv('../data/the_most_main_view.csv', sep=',', decimal='.')
 
-print(df.info())
-
-df.drop(columns=['country_name', 'year', 'category'],# , 'Malaria', 'Unnamed: 0'
-        inplace=True)  # delete or not? , 'Neoplasms', 'social_support', 'Malaria'
-df.dropna(inplace=True)
+df.drop(columns=['country_name', 'year', 'category', 'Unnamed: 0'], inplace=True)
 
 corr = df.corr()
-
-sb.heatmap(corr, xticklabels=corr.columns, yticklabels=corr.columns, annot=True,
-           cmap=sb.color_palette("coolwarm", as_cmap=True))
+sb.heatmap(corr, xticklabels=corr.columns, yticklabels=corr.columns, annot=True, cmap=sb.color_palette("coolwarm", as_cmap=True))
 plt.savefig('../data/images/happiness_corr.png')
 plt.show()
-#main_work(df)
+main_work(df)

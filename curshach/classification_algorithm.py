@@ -126,7 +126,7 @@ def classification_function():
     df = pd.read_csv('../data/the_most_main_view.csv', sep=',', decimal='.')
     df = df.drop(columns=["Unnamed: 0", 'happiness_score'])
     column = df.pop("category")
-    df.insert(9, "category", column)
+    df.insert(8, "category", column)
     df = df[df['category'].isna() == False]
     df.drop(columns=['country_name', 'year'], inplace=True)
     print(df.info())
@@ -153,8 +153,8 @@ def classification_function():
     # adaBoosting(X_train, Y_train, X_test, Y_test)
     getCountryClass(randomForest(X_train, Y_train, X_test, Y_test))
 
-    # seaborn.pairplot(df, hue='category', height=2.5, vars=['gdp', 'freedom', 'trust', 'generosity'])
-    seaborn.pairplot(df, diag_kind="kde", hue='category', height=2.5, vars=['gdp', 'freedom', 'trust', 'generosity']).map_lower(seaborn.kdeplot, levels=1, color=".2")
+    seaborn.pairplot(df, hue='category', height=2.5)#, vars=['gdp', 'freedom', 'trust', 'generosity']
+    # seaborn.pairplot(df, diag_kind="kde", hue='category', height=2.5, vars=['gdp', 'freedom', 'trust']).map_lower(seaborn.kdeplot, levels=1, color=".2")
 
     plt.savefig('../data/images/test.png')
     plt.show()
@@ -163,7 +163,7 @@ def classification_function():
 
 
 def getCountryClass(classificator):
-    test_x = [1.56391, 0.61583, 0.37798, 0.28034, 0, 0.2949038873536539, 0.05204186247417423]
+    test_x = [0.1050227558765908,	0.0,	0.1458964770826154,	0.84058,	0.25646,	0.08404]
     print(classes[classificator.predict(np.array(test_x).reshape(1, -1))[0]])
     pass
 

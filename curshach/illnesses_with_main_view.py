@@ -14,10 +14,21 @@ df.dropna(inplace=True)
 df = df.pivot(index=["country_name", "year"], columns="reason_name", values="count")
 print(df.info())
 
-df = df.filter(items=["Malaria", "Drug use disorders", "HIV/AIDS"])
+
+
+df = df.filter(items=[
+    #'Acute hepatitis',
+    #'Alzheimer\'s disease and other dementias',
+    #'Diarrheal diseases',
+    'Drug use disorders',
+    'Malaria',
+    #'Neoplasms',
+    #'Tuberculosis',
+    #'Parkinson\'s disease',
+    'HIV/AIDS'
+])
 df_main = pd.read_csv('../data/main_view.csv', sep=',', decimal='.')
 df = pd.merge(df, df_main, on=["country_name", "year"])
-df = df.drop(columns=["social_support"])
 
 df = df[df["HIV/AIDS"] <= 40]
 df = df[df["Drug use disorders"] <= 1.4]
@@ -25,7 +36,10 @@ df = df[df["Drug use disorders"] <= 1.4]
 df.to_csv("../data/the_most_main_view.csv")
 df = df.drop(columns=["country_name", "year"])
 
-corr = df.corr() #.sort_values('happiness_score', ascending=False)
-seaborn.heatmap(corr, xticklabels=corr.columns, yticklabels=corr.columns, annot=True, cmap=seaborn.color_palette("coolwarm", as_cmap=True))
+corr = df.corr()
+plt.figure(figsize=(15, 15))
+seaborn.set(font_scale = 0.8)
+seaborn.heatmap(corr, xticklabels=corr.columns, yticklabels=corr.columns, annot=True, fmt='.2f',
+                cmap=seaborn.color_palette("coolwarm", as_cmap=True))
 plt.savefig('../data/images/illnesses_corr.png')
 plt.show()
