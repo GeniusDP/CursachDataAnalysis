@@ -54,17 +54,23 @@ def main_work(df):
         x.append(tmp)
     y = df['happiness_score'].to_numpy()
 
-    coef, R2, reg, _RSE = regression(x, y, 2)
-    print('degree 1 R^2: ', R2)
-    print('degree 1 RSE: ', _RSE)
-    for col in df.columns:
-        if col != 'happiness_score':
-            printProjection(df, reg, col, 1000)
-    plt.show()
+    for i in range(3, 4):
+        coef, R2, reg, _RSE = regression(x, y, i)
+        print('---------------------------------------')
+        print(f'degree {i} R^2: ', R2)
+        print(f'degree {i} RSE: ', _RSE)
+        print('---------------------------------------')
+        fig, axs = plt.subplots(2, 3, figsize=(6, 6))
+        cnt = -1
+        for col in df.columns:
+            cnt += 1
+            if col != 'happiness_score':
+                printProjection(df, reg, col, 1000, axs[cnt // 3, cnt % 3])
+        plt.show()
     pass
 
 
-def printProjection(df, regression, argument_name, detalization):
+def printProjection(df, regression, argument_name, detalization, axs):
     def fillZeros(list_length):
         list = []
         for i in range(list_length):
@@ -82,24 +88,27 @@ def printProjection(df, regression, argument_name, detalization):
         xReg.append(tmp)
         arg_value += step
 
-    plt.figure(figsize=(5, 5))
-    plt.title('Regression')
-    plt.xlabel(argument_name)
-    plt.ylabel('happiness')
-    plt.grid(linestyle='--')
+    axs.set_title('Regression')
+    axs.set_xlabel(argument_name)
+    axs.set_ylabel('happiness')
+    axs.grid(linestyle='--')
 
-    plt.plot(np.linspace(0, max_value, len(xReg)).reshape(-1, 1), regression.predict(xReg), color='red')
-    plt.scatter(df[argument_name].to_numpy(), df['happiness_score'])
+    axs.plot(
+        np.linspace(0, max_value, len(xReg)).reshape(-1, 1),
+        regression.predict(xReg),
+        color='red')
+    axs.scatter(df[argument_name].to_numpy(), df['happiness_score'])
     pass
 
 
 # program
-df = pd.read_csv('../data/the_most_main_view.csv', sep=',', decimal='.')
+df = pd.read_csv('../data/main_view.csv', sep=',', decimal='.')
 
 print(df.info())
 
-df.drop(columns=['country_name', 'year', 'category', 'Malaria', 'Unnamed: 0'],
+df.drop(columns=['country_name', 'year', 'category'],# , 'Malaria', 'Unnamed: 0'
         inplace=True)  # delete or not? , 'Neoplasms', 'social_support', 'Malaria'
+df.dropna(inplace=True)
 
 corr = df.corr()
 
@@ -107,4 +116,4 @@ sb.heatmap(corr, xticklabels=corr.columns, yticklabels=corr.columns, annot=True,
            cmap=sb.color_palette("coolwarm", as_cmap=True))
 plt.savefig('../data/images/happiness_corr.png')
 plt.show()
-main_work(df)
+#main_work(df)
