@@ -120,7 +120,6 @@ def adaBoosting(X_train, Y_train, X_test, Y_test):
     plot_confusion_matrix(cm, classes, title='Confusion matrix for LogisticRegressionSoftMax')
     return ada_boosting
 
-
 def classification_function():
     # read data
     # df = pd.read_csv('../data/country_classification.csv', sep=',', decimal='.')
@@ -153,6 +152,9 @@ def classification_function():
     # baggingClassification(X_train, Y_train, X_test, Y_test)
     # adaBoosting(X_train, Y_train, X_test, Y_test)
     getCountryClass(randomForest(X_train, Y_train, X_test, Y_test))
+    seaborn.pairplot(df, hue='category', height=2.5, vars=['gdp', 'freedom', 'trust', 'generosity'])
+    plt.savefig('../data/images/test.png')
+    plt.show()
     pass
 
 
