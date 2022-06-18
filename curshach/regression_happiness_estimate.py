@@ -17,8 +17,10 @@ pd.set_option('display.expand_frame_repr', False)
 
 
 def regression(x, y, max_degree):
-    Xtrain, Xtest, Ytrain, Ytest = train_test_split(x, y, test_size=0.3, random_state=4)
-    reg = make_pipeline(PolynomialFeatures(degree=max_degree), LinearRegression())
+    Xtrain, Xtest, Ytrain, Ytest = \
+        train_test_split(x, y, test_size=0.3, random_state=4)
+    reg = make_pipeline(PolynomialFeatures(degree=max_degree),
+                        LinearRegression())
     reg.fit(Xtrain, Ytrain)
     Ypredicted = []
     for i in range(0, Xtest.__len__()):
@@ -27,9 +29,8 @@ def regression(x, y, max_degree):
     R2 = r2_score(Ytest, Ypredicted)
     _RSE = RSE(Ytest, Ypredicted)
     coef = reg['linearregression'].coef_
-    w0 = reg['linearregression'].intercept_
 
-    return coef, w0, R2, reg, _RSE
+    return coef, R2, reg, _RSE
 
 
 def RSE(y_true, y_predicted):
@@ -53,7 +54,7 @@ def main_work(df):
         x.append(tmp)
     y = df['happiness_score'].to_numpy()
 
-    coef, w0, R2, reg, _RSE = regression(x, y, 2)
+    coef, R2, reg, _RSE = regression(x, y, 2)
     print('degree 1 R^2: ', R2)
     print('degree 1 RSE: ', _RSE)
     for col in df.columns:
