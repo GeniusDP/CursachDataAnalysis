@@ -29,5 +29,3 @@ corr = df.corr() #.sort_values('happiness_score', ascending=False)
 seaborn.heatmap(corr, xticklabels=corr.columns, yticklabels=corr.columns, annot=True, cmap=seaborn.color_palette("coolwarm", as_cmap=True))
 plt.savefig('../data/images/illnesses_corr.png')
 plt.show()
-print(corr)
-

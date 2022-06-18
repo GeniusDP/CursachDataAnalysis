@@ -1,20 +1,17 @@
 import numpy as np
-import pandas as pd
 
 # configurations
 from matplotlib import pyplot as plt
 
+import pandas as pd
 pd.options.display.max_rows = 10000
 pd.options.display.max_columns = 10000
 pd.set_option('display.expand_frame_repr', False)
 
 
 def convert_column_to_float(dataset, column_label):
-    dataset[column_label] = dataset[column_label].astype(str).str.replace(',', '.').astype(float)
-
-
-df = pd.read_csv('../stage_zone/world-happiness-report-2015-2022-cleaned.csv', sep=',', decimal='.', encoding='cp1252')
-
+    dataset[column_label] = dataset[column_label]\
+        .astype(str).str.replace(',', '.').astype(float)
 
 def build_hist(dataset, column):
     plt.style.use('seaborn-whitegrid')
@@ -25,6 +22,8 @@ def build_hist(dataset, column):
     pass
 
 
+df = pd.read_csv('../stage_zone/world-happiness-report-2015-2022-cleaned.csv',
+                 sep=',', decimal='.', encoding='cp1252')
 convert_column_to_float(df, 'Happiness Score')
 convert_column_to_float(df, 'Economy (GDP per Capita)')
 convert_column_to_float(df, 'Family (Social Support)')

@@ -44,7 +44,9 @@ SELECT (SELECT id FROM adiscoursework.date WHERE "Year" = year),
        "Freedom",
        "Trust (Government Corruption)",
        "Generosity",
-       (SELECT "Consumption" FROM stagecoursework.country_consumption WHERE country_consumption."Year" = happiness."Year" AND country_consumption."Country" = happiness."Country"),
+       (SELECT "Consumption" FROM stagecoursework.country_consumption
+       WHERE country_consumption."Year" = happiness."Year"
+         AND country_consumption."Country" = happiness."Country"),
        (SELECT "Country Classification"
         FROM stagecoursework.country_indicators
         WHERE stagecoursework.country_indicators."Year" = happiness."Year"
