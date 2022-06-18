@@ -21,6 +21,7 @@ pd.set_option('display.expand_frame_repr', False)
 classes = ['Least Developed Country', 'Developing Country', 'Developed Country']
 classes.sort()
 
+
 def plot_confusion_matrix(cm, classes, title='Confusion matrix', cmap=plt.cm.Blues):
     plt.imshow(cm, interpolation='nearest', cmap=cmap)
     plt.title(title)
@@ -127,7 +128,7 @@ def classification_function():
     df = df.drop(columns=["Unnamed: 0", 'happiness_score'])
     column = df.pop("category")
     df.insert(9, "category", column)
-    df = df[ df['category'].isna() == False ]
+    df = df[df['category'].isna() == False]
     df.drop(columns=['country_name', 'year'], inplace=True)
     print(df.info())
 
@@ -144,7 +145,7 @@ def classification_function():
 
     X_train, X_test, Y_train, Y_test = train_test_split(X_data.values, Y_data, test_size=0.3, random_state=5)
 
-    #classification algorithm
+    # classification algorithm
     # decisionTreeClassification(X_train, Y_train, X_test, Y_test)
     # randomForest(X_train, Y_train, X_test, Y_test)
     # logisticRegression(X_train, Y_train, X_test, Y_test)
@@ -153,6 +154,7 @@ def classification_function():
     # adaBoosting(X_train, Y_train, X_test, Y_test)
     getCountryClass(randomForest(X_train, Y_train, X_test, Y_test))
     pass
+
 
 def getCountryClass(classificator):
     test_x = [1.56391, 0.61583, 0.37798, 0.28034, 0, 0.2949038873536539, 0.05204186247417423]
