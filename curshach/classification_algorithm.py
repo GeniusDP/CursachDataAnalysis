@@ -1,7 +1,6 @@
 import itertools
 import numpy as np
 import pandas as pd
-import penguins as penguins
 import seaborn
 from matplotlib import pyplot as plt
 from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier, BaggingClassifier, AdaBoostClassifier
@@ -159,6 +158,7 @@ def classification_function():
 
     plt.savefig('../data/images/test.png')
     plt.show()
+
     pass
 
 

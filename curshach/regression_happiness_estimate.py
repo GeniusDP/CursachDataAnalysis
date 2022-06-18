@@ -1,3 +1,5 @@
+import math
+
 import numpy as np
 import pandas as pd
 import seaborn as sb
@@ -23,11 +25,24 @@ def regression(x, y, max_degree):
         Ypredicted.append(reg.predict([Xtest[i]])[0])
 
     R2 = r2_score(Ytest, Ypredicted)
-
+    _RSE = RSE(Ytest, Ypredicted)
     coef = reg['linearregression'].coef_
     w0 = reg['linearregression'].intercept_
-    return coef, w0, R2, reg
 
+    return coef, w0, R2, reg, _RSE
+
+
+def RSE(y_true, y_predicted):
+    """
+    - y_true: Actual values
+    - y_predicted: Predicted values
+    """
+    y_true = np.array(y_true)
+    y_predicted = np.array(y_predicted)
+    RSS = np.sum(np.square(y_true - y_predicted))
+
+    rse = math.sqrt(RSS / (len(y_true) - 2))
+    return rse
 
 def main_work(df):
     x = []
@@ -37,13 +52,15 @@ def main_work(df):
         x.append(tmp)
     y = df['happiness_score'].to_numpy()
 
-    coef, w0, R2, reg = regression(x, y, 1)
-    print('degree 1: ', R2)
+    coef, w0, R2, reg, _RSE = regression(x, y, 2)
+    print('degree 1 R^2: ', R2)
+    print('degree 1 RSE: ', _RSE )
     for col in df.columns:
         if col != 'happiness_score':
             printProjection(df, reg, col, 1000)
     plt.show()
     pass
+
 
 
 def printProjection(df, regression, argument_name, detalization):
@@ -73,6 +90,8 @@ def printProjection(df, regression, argument_name, detalization):
     plt.plot(np.linspace(0, max_value, len(xReg)).reshape(-1, 1), regression.predict(xReg), color='red')
     plt.scatter(df[argument_name].to_numpy(), df['happiness_score'])
     pass
+
+
 
 
 # program
