@@ -44,6 +44,7 @@ def RSE(y_true, y_predicted):
     rse = math.sqrt(RSS / (len(y_true) - 2))
     return rse
 
+
 def main_work(df):
     x = []
     for i in range(0, df.__len__()):
@@ -54,13 +55,12 @@ def main_work(df):
 
     coef, w0, R2, reg, _RSE = regression(x, y, 2)
     print('degree 1 R^2: ', R2)
-    print('degree 1 RSE: ', _RSE )
+    print('degree 1 RSE: ', _RSE)
     for col in df.columns:
         if col != 'happiness_score':
             printProjection(df, reg, col, 1000)
     plt.show()
     pass
-
 
 
 def printProjection(df, regression, argument_name, detalization):
@@ -92,18 +92,18 @@ def printProjection(df, regression, argument_name, detalization):
     pass
 
 
-
-
 # program
 df = pd.read_csv('../data/the_most_main_view.csv', sep=',', decimal='.')
 
 print(df.info())
 
-df.drop(columns=['country_name', 'year', 'category', 'Malaria', 'Unnamed: 0'], inplace=True) # delete or not? , 'Neoplasms', 'social_support', 'Malaria'
+df.drop(columns=['country_name', 'year', 'category', 'Malaria', 'Unnamed: 0'],
+        inplace=True)  # delete or not? , 'Neoplasms', 'social_support', 'Malaria'
 
 corr = df.corr()
 
-sb.heatmap(corr, xticklabels=corr.columns, yticklabels=corr.columns, annot=True, cmap=sb.color_palette("coolwarm", as_cmap=True))
+sb.heatmap(corr, xticklabels=corr.columns, yticklabels=corr.columns, annot=True,
+           cmap=sb.color_palette("coolwarm", as_cmap=True))
 plt.savefig('../data/images/happiness_corr.png')
 plt.show()
 main_work(df)
