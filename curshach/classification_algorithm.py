@@ -48,7 +48,7 @@ def decisionTreeClassification(X_train, Y_train, X_test, Y_test):
     dtree_predictions = dtree_model.predict(X_test)
 
     # accuracy
-    print('R^2 score for decision tree= ', dtree_model.score(X_test, Y_test))
+    print('R^2 score for decision tree: ', dtree_model.score(X_test, Y_test))
 
     # confusion matrix
     cm = confusion_matrix(Y_test, dtree_predictions, normalize='all')
@@ -91,7 +91,7 @@ def gradientBoosting(X_train, Y_train, X_test, Y_test):
 
     # confusion matrix
     cm = confusion_matrix(Y_test, gradientBoosting_predict, normalize='all')
-    plot_confusion_matrix(cm, classes, title='Confusion matrix for LogisticRegressionSoftMax')
+    plot_confusion_matrix(cm, classes, title='Confusion matrix for GradientBoosting')
     return gradient_boosting
 
 
@@ -121,44 +121,37 @@ def adaBoosting(X_train, Y_train, X_test, Y_test):
     return ada_boosting
 
 def classification_function():
-    # read data
-    # df = pd.read_csv('../data/country_classification.csv', sep=',', decimal='.')
     df = pd.read_csv('../data/the_most_main_view.csv', sep=',', decimal='.')
-    df = df.drop(columns=["Unnamed: 0", 'happiness_score'])
-    column = df.pop("category")
-    df.insert(8, "category", column)
+    df = df.drop(columns=["Unnamed: 0", 'country_name', 'year'])
     df = df[df['category'].isna() == False]
-    df.drop(columns=['country_name', 'year'], inplace=True)
-    print(df.info())
 
     # correlation
     corr = df.corr().round(2)
-    seaborn.heatmap(corr, xticklabels=corr.columns, yticklabels=corr.columns, annot=True, cmap=seaborn.color_palette("coolwarm", as_cmap=True))
+    seaborn.heatmap(corr, xticklabels=corr.columns, yticklabels=corr.columns,
+                    annot=True, cmap=seaborn.color_palette("coolwarm", as_cmap=True))
     plt.show()
-
+    df.drop(columns='happiness_score', inplace=True)
     X_data = df.drop(columns=['category'], inplace=False)
 
     # transforms 'Least Developed Country' into 2, etc...(ASC alphabetic order)
     label_encoder = LabelEncoder()
     Y_data = label_encoder.fit_transform(df['category'])
 
-    X_train, X_test, Y_train, Y_test = train_test_split(X_data.values, Y_data, test_size=0.3, random_state=5)
+    X_train, X_test, Y_train, Y_test = train_test_split(
+        X_data.values,
+        Y_data,
+        test_size=0.3,
+        random_state=5)
 
     # classification algorithm
-    # decisionTreeClassification(X_train, Y_train, X_test, Y_test)
-    # randomForest(X_train, Y_train, X_test, Y_test)
-    # logisticRegression(X_train, Y_train, X_test, Y_test)
-    # gradientBoosting(X_train, Y_train, X_test, Y_test)
-    # baggingClassification(X_train, Y_train, X_test, Y_test)
-    # adaBoosting(X_train, Y_train, X_test, Y_test)
-    getCountryClass(randomForest(X_train, Y_train, X_test, Y_test))
+    decisionTreeClassification(X_train, Y_train, X_test, Y_test)
+    randomForest(X_train, Y_train, X_test, Y_test)
+    logisticRegression(X_train, Y_train, X_test, Y_test)
+    gradientBoosting(X_train, Y_train, X_test, Y_test)
 
-    seaborn.pairplot(df, hue='category', height=2.5)#, vars=['gdp', 'freedom', 'trust', 'generosity']
-    # seaborn.pairplot(df, diag_kind="kde", hue='category', height=2.5, vars=['gdp', 'freedom', 'trust']).map_lower(seaborn.kdeplot, levels=1, color=".2")
-
+    seaborn.pairplot(df, hue='category', height=2.5,  vars=['gdp', 'freedom', 'trust', 'Malaria'])
     plt.savefig('../data/images/test.png')
     plt.show()
-
     pass
 
 
