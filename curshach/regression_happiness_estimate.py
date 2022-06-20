@@ -17,11 +17,10 @@ pd.set_option('display.expand_frame_repr', False)
 
 
 def regression(x, y, max_degree):
-    Xtrain, Xtest, Ytrain, Ytest = \
-        train_test_split(x, y, test_size=0.3, random_state=4)
-    reg = make_pipeline(PolynomialFeatures(degree=max_degree),
-                        LinearRegression())
+    Xtrain, Xtest, Ytrain, Ytest = train_test_split(x, y, test_size=0.3, random_state=4)
+    reg = make_pipeline(PolynomialFeatures(degree=max_degree), LinearRegression())
     reg.fit(Xtrain, Ytrain)
+
     Ypredicted = []
     for i in range(0, Xtest.__len__()):
         Ypredicted.append(reg.predict([Xtest[i]])[0])
